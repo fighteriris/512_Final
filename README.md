@@ -1,10 +1,15 @@
+EC512 Final Project
+===================
 Collaborator(random sort)
+----------------------------
 Shaobin Ding; Ying Wang; Congrui Xu; Tong Liu
 
 TRIPTRACER
+--------------
 Name of our website. 
 
 Functions
+----------
 1. The main idea for this website is to make a record of the users' trips. They may have a number of vacations to places all round the world, and they may not have a chance to go back again. So keep a record like a travel of dairy is useful and meaningful.
 
 2. Allow users to upload the pictures and soundtrack they take during the travel. They can also write down some special stories of the journey.
@@ -16,6 +21,8 @@ Functions
 5. Mark the place in the map. 
 
 User Case
+----------
 
 Database
+--------
 
