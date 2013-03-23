@@ -5,7 +5,7 @@
 *.pydevproject
 .project
 .metadata
-.docx
+*.docx
 bin/
 tmp/
 *.tmp
