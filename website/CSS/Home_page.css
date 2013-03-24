@@ -11,19 +11,30 @@
 }
 #Home_content
 {
+    border-style: solid;
+    border-color: inherit;
+    border-width: medium;
     width:auto;
     height:800px;
-    border:solid;
     margin-top:52px;
-    background-image:url(homeback.jpg);
+    background-image:url('../homeback.jpg');
     
     background-repeat:no-repeat;
 }
 #Home_info
 {
-    margin-top:100px;
+    border-style:solid;
+    margin-top:300px;
+    width:auto;
     background-color:transparent;
     enable-background:inherit;
+}
+    #Home_info h1
+{
+    
+    font-family: Arial;
+    font-size: 40px;
+    color: #FFFFFF;
 }
 body {
 }
