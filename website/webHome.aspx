@@ -15,8 +15,9 @@
         <div id="Home_content" >
         <div id="Home_info" >
             <h1>
-            This is a route.
+             A route that we record our journeys.
                 </h1>
+
             </div>
         </div>
     </form>
