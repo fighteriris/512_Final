@@ -11,20 +11,14 @@
 }
 #Home_content
 {
-    border-style: solid;
-    border-color: inherit;
-    border-width: medium;
     width:auto;
-    height:800px;
-    margin-top:52px;
-    background-image:url('../homeback.jpg');
-    
+    height:800px;   
+    background-image:url('../homeback.jpg');   
     background-repeat:no-repeat;
 }
 #Home_info
 {
-    border-style:solid;
-    margin-top:300px;
+  padding-top:300px;
     width:auto;
     background-color:transparent;
     enable-background:inherit;
@@ -36,6 +30,11 @@
     font-size: 40px;
     color: #FFFFFF;
 }
+#Home_search
+{
+    padding-left:50px;
+}
+
 body {
 }
 
