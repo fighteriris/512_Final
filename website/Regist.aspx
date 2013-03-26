@@ -6,8 +6,8 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
      <link rel="Stylesheet" type="text/css"href="CSS/Reg_page.css" />
-    <link rel="stylesheet" href="CSS/normalize.css">
-	<link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/normalize.css"/>
+	<link rel="stylesheet" href="CSS/style.css"/>
     <title></title>
 </head>
 <body>
@@ -27,7 +27,7 @@
 					<asp:textbox if="password" name="password"  runat="server" />
                         </li>
 				<li>
-					<asp:button text="Submit" type="submit" value="Login" runat="server"/>
+					<asp:button text="Login" type="submit" value="Login" runat="server"/>
 				</li>
 			</ul>
             </div>
