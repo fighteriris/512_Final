@@ -83,8 +83,10 @@
 </head>
 <body onload="setInterval(sitebg,8000)">
     <form id="form1" runat="server" style="width:1500px">                             <%-- whole website --%>
-        <div id="Home_topbar" runat="server" style="width:1500px">                    <%-- Top Bar --%>
+        <div id="Home_topbar" runat="server" style="height:60px;width:1500px">                    <%-- Top Bar --%>
             <div id="Home_topbar_else" style="width:600px;float:left">
+                &nbsp;
+                <img src="Home_BG/logo.jpg"  alt="logo" height="60" width="60" />
             </div>
 
             <div id="Home_login" runat="server" style="width:600px; float:right">                 
