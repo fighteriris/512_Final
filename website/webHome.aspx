@@ -66,15 +66,15 @@
             var sed = d.getSeconds();
             if (sed > 0 && sed <= 8) {
                 fadeIn(iBase.Id('Home_content'));
-                document.getElementById('Home_content').style.background = "url('Home_BG/1.jpg') no-repeat";
+                document.getElementById('Home_content').style.background = "url('Home_BG/ma3.png') no-repeat";
                 //document.body.style.background = "url('images/headerbg_1.png') repeat-x scroll 0 10px #EFEFEF"
             } else if (sed > 8 && sed <= 16) {
                 fadeIn(iBase.Id('Home_content'));
-                document.getElementById('Home_content').style.background = "url('Home_BG/2.jpg')";
+                document.getElementById('Home_content').style.background = "url('Home_BG/los4.png')";
                 //document.body.style.background = "url('images/headerbg_2.png') repeat-x scroll 0 10px #EFEFEF"
             } else {
                 fadeIn(iBase.Id('Home_content'));
-                document.getElementById('Home_content').style.background = "url('homeback.jpg')";
+                document.getElementById('Home_content').style.background = "url('Home_BG/bo3.jpg')";
                 //document.body.style.background = "url('images/headerbg_3.png') repeat-x scroll 0 10px #EFEFEF"
             }
         }
