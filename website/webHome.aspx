@@ -82,14 +82,12 @@
 
 </head>
 <body onload="setInterval(sitebg,8000)">
-    <form id="form1" runat="server" style="width:1500px">                             <%-- whole website --%>
-        <div id="Home_topbar" runat="server" style="height:60px;width:1500px">                    <%-- Top Bar --%>
-            <div id="Home_topbar_else" style="width:600px;float:left">
-                &nbsp;
-                <img src="Home_BG/logo.jpg"  alt="logo" height="60" width="60" />
-            </div>
+    <form id="form1" runat="server" style="width:1500px">                            
+        <div id="Home_topbar" runat="server">                    
+            <div id="Home_topbar_else">
+             </div>
 
-            <div id="Home_login" runat="server" style="width:600px; float:right">                 
+            <div id="Home_login" runat="server">                 
                 <ul style ="height:30px">
                     <li>
                         <label for="usermail">Email</label>
@@ -113,21 +111,21 @@
             <div id="Home_info" runat="server">                                                         <%-- Content_1 search part --%>
                 <h1 style="">A route that we record our journeys.</h1>
 
-                <div id="Home_search" runat="server" style="height:500px;width:1500px">
-                    <asp:Textbox runat="server" Height="28px" Width="204px" BorderStyle="None"/>
+                <div id="Home_search" runat="server">
+                    <asp:Textbox runat="server"/>
                 </div>
 
             </div>
 
-            <div id="top_blog" runat="server" style="height:300px;width:1500px;border:solid">
+            <div id="top_blog" runat="server" >
                 <h2>Top Blog</h2>
             </div>
 
-            <div id="top_photo" runat="server" style="height:300px;width:1500px;border:solid">
+            <div id="top_photo" runat="server">
                 <h2>Top Photo</h2>
             </div>
 
-            <div id="top_destination" runat="server" style="height:300px;width:1500px;border:solid">
+            <div id="top_destination">
                  <h2>Top Destination</h2>
             </div>
 

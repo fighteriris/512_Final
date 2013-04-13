@@ -6,6 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
      <link rel="Stylesheet" type="text/css"href="CSS/Global.css" />
+    <link rel="Stylesheet" type="text/css"href="CSS/webPersonal.css" />
     <title></title>
 </head>
 <body>
@@ -16,6 +17,9 @@
                 </div>
         </div>
     <div class="content" runat="server">
+        <div id="p_content" runat="server">
+            persssss
+        </div>
     
     </div>
     </form>
