@@ -82,37 +82,53 @@
 
 </head>
 <body onload="setInterval(sitebg,8000)">
-    <form id="form1" runat="server">
-    <div id="Home_topbar" runat="server">
-        <div id="Home_topbar_else">
+    <form id="form1" runat="server" style="width:1500px">                             <%-- whole website --%>
+        <div id="Home_topbar" runat="server" style="width:1500px">                    <%-- Top Bar --%>
+            <div id="Home_topbar_else" style="width:600px;float:left">
             </div>
-        <div id="Home_login" runat="server">
-            <ul>
-                <li>
-                    <label for="usermail">Email</label>
-                    <asp:textbox ID="Home_page_email" runat="server"/>
-                    </li>
-                <li>
-                    <label for="password">Password</label>
-                    <asp:textbox ID="Home_page_passwd" runat="server"/>
-                    
-                    </li>
-                <li>
-                    <asp:Button ID="Home_page_login" Text="Login" runat="server"/>
-                </li>
-                </ul>
-            </div>    
-    </div>
 
-        <div id="Home_content"  runat="server" >
-          <div id="Home_info" runat="server">
-            <h1>
-             A route that we record our journeys.
-                </h1>
-              <div id="Home_search" runat="server">
-                  <asp:Textbox runat="server" Height="28px" Width="204px" BorderStyle="None"/>
-                  </div>
+            <div id="Home_login" runat="server" style="width:600px; float:right">                 
+                <ul style ="height:30px">
+                    <li>
+                        <label for="usermail">Email</label>
+                        <asp:textbox ID="Home_page_email" runat="server"/>
+                        </li>
+                    <li>
+                        <label for="password">Password</label>
+                        <asp:textbox ID="Home_page_passwd" runat="server"/>
+                    
+                        </li>
+                    <li>
+                    
+                        <asp:Button ID="Home_page_login" Text="Login" runat="server"/>
+                    </li>
+                </ul>
+            </div> 
+           
+        </div>
+
+        <div id="Home_content"  runat="server" style="width:1500px">                       <%-- Content --%>
+            <div id="Home_info" runat="server">                                                         <%-- Content_1 search part --%>
+                <h1 style="">A route that we record our journeys.</h1>
+
+                <div id="Home_search" runat="server" style="height:500px;width:1500px">
+                    <asp:Textbox runat="server" Height="28px" Width="204px" BorderStyle="None"/>
+                </div>
+
             </div>
+
+            <div id="top_blog" runat="server" style="height:300px;width:1500px;border:solid">
+                <h2>Top Blog</h2>
+            </div>
+
+            <div id="top_photo" runat="server" style="height:300px;width:1500px;border:solid">
+                <h2>Top Photo</h2>
+            </div>
+
+            <div id="top_destination" runat="server" style="height:300px;width:1500px;border:solid">
+                 <h2>Top Destination</h2>
+            </div>
+
         </div>
     </form>
 </body>

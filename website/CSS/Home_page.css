@@ -15,13 +15,13 @@
 }
 #Home_topbar_else
 {
-    width:690px;
+    width:895px;
     height:50px;
     float:left;
     }
 #Home_login
 {
-    width:600px;
+    width:741px;
     height:50px;
     float:left;
     padding-left:15px;
@@ -41,7 +41,7 @@
 #Home_login li {
 	display: inline;
 	float: left;
-    width: 160px;
+    width: 181px;
     height: 50px;
 }
 #Home_login input:not([type=submit]) {
