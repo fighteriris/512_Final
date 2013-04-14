@@ -4,9 +4,9 @@ Collaborator(random sort)
 ----------------------------
 Shaobin Ding; Ying Wang; Congrui Xu; Tong Liu
 
-Trip Tracker
+Trip Tracer
 --------------
-Name of our website. 
+hehe
 
 Functions
 ----------
