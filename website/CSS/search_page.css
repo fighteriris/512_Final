@@ -1,9 +1,5 @@
-﻿body
-{
-}
-
-
-#Personal_topbar
+﻿
+#Search_topbar
 {
     background-color:#276195; z-index:999; position:fixed; top:0; left:0px; 
     height:54px;
@@ -15,32 +11,53 @@
     overflow:visible;
     bottom: 252px;
 }
-#Personal_topbar_else
+#Search_topbar_else
 {
     width:700px;
     height:50px;
     float:left;
 }
 
-#Personal_logo {
+#Search_logo 
+{
     width:150px;
     
 }
 
-#Personal_login {
+#Search_login 
+{
     float:right;
-    border:groove;
+    border:solid;
 }
 
-#Personal_content
+#Search_content
 {
-    border-style: groove;
+    border-style: solid;
     border-color: inherit;
     border-width: medium;
-    left:0px;
+left:-9px;
     margin-top:50px;
-    width:100%;
-    height:1176px;
+    width:1200px;
+    height:1000px; 
+    position:absolute;  
+    top: 26px;
 }
 
 
+#Search_img
+{    border:solid;
+    width:100%;
+    height:400px;
+}
+#Search_top_photo
+{    border:solid;
+    width:100%;
+    height:300px;
+}
+
+#Search_top_blog
+{
+    border:solid;
+    width:100%;
+    height:300px;
+}

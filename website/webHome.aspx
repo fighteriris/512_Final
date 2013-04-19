@@ -1,14 +1,12 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="webHome.aspx.cs" Inherits="webHome" %>
+﻿x<%@ Page Language="C#" AutoEventWireup="true" CodeFile="webHome.aspx.cs" Inherits="webHome" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head runat="server"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="Stylesheet" type="text/css"href="CSS/Home_page.css" />
-     <script src="JQ/jquery-1.9.1js"></script>
+    <link rel="stylesheet" href="CSS/style.css"/>
+    <script src="JQ/jquery-1.9.1js"></script>
     <title>Triptracer</title>
     <script type="text/javascript">
+
         var iBase = {
             Id: function (name) {
                 return document.getElementById(name);
@@ -57,8 +55,19 @@
                 }
             })();
         }
-        </script>
-    <script type="text/javascript">
+        function resize(which, max) {
+            var elem = document.getElementById(which);
+            if (elem == undefined || elem == null) return false;
+            if (max == undefined) max = 1200;
+            if (elem.width > elem.height) {
+                if (elem.width > max) elem.width = max;
+            } else {
+                if (elem.height > max) elem.height = max;
+            }
+            return elem;
+        }
+
+        </script><script type="text/javascript">
 
         function sitebg() {
             
@@ -66,50 +75,57 @@
             var sed = d.getSeconds();
             if (sed > 0 && sed <= 8) {
                 fadeIn(iBase.Id('Home_content'));
-                document.getElementById('Home_content').style.background = "url('Home_BG/ma3.png') no-repeat";
+                document.getElementById('Home_content').style.background = resize(url('Home_BG/BG1.png'));
+                    //"url('Home_BG/BG1.png') no-repeat";
                 //document.body.style.background = "url('images/headerbg_1.png') repeat-x scroll 0 10px #EFEFEF"
             } else if (sed > 8 && sed <= 16) {
                 fadeIn(iBase.Id('Home_content'));
-                document.getElementById('Home_content').style.background = "url('Home_BG/los4.png')";
+                document.getElementById('Home_content').style.background = resize(url('Home_BG/BG2.png'));
+                    //"url('Home_BG/BG2.png')";
                 //document.body.style.background = "url('images/headerbg_2.png') repeat-x scroll 0 10px #EFEFEF"
             } else {
                 fadeIn(iBase.Id('Home_content'));
-                document.getElementById('Home_content').style.background = "url('Home_BG/bo3.jpg')";
+                document.getElementById('Home_content').style.background = resize(url('Home_BG/BG3.png'));
+                    //"url('Home_BG/BG3.png')";
                 //document.body.style.background = "url('images/headerbg_3.png') repeat-x scroll 0 10px #EFEFEF"
             }
         }
 </script>
 
 </head>
-<body onload="setInterval(sitebg,8000)">
-    <form id="form1" runat="server" style="width:1500px">                            
+<body onload="setInterval(sitebg,8000)" >
+    <form id="Home_form" runat="server" style="width:1200px">                            
         <div id="Home_topbar" runat="server">                    
             <div id="Home_topbar_else">
+                <img id="Home_logo" src="Home_BG/logo.png"  alt="logo" />
              </div>
-
-            <div id="Home_login" runat="server">                 
-                <ul style ="height:30px">
+            
+            <div id="Home_status" runat="server">                                          <%-- Content --%>
+                <ul id="Home_login_table">                                                
                     <li>
                         <label for="usermail">Email</label>
                         <asp:textbox ID="Home_page_email" runat="server"/>
                         </li>
                     <li>
-                        <label for="password">Password</label>
+                    
                         <asp:textbox ID="Home_page_passwd" runat="server"/>
                     
                         </li>
                     <li>
-                    
-                        <asp:Button ID="Home_page_login" Text="Login" runat="server"/>
-                    </li>
+                        <asp:Button ID="Home_page_login" Text="Login" runat="server" style="width:80px"/>
+                        <asp:Button ID="Homre_page_signup" Text="Sign up" runat="server" Width="80px" OnClick="Home_page_signup_Click"/>
+                        </li>
+
                 </ul>
+                
+                    
             </div> 
            
         </div>
 
-        <div id="Home_content"  runat="server" style="width:1500px">                       <%-- Content --%>
-            <div id="Home_info" runat="server">                                                         <%-- Content_1 search part --%>
-                <h1 style="">A route that we record our journeys.</h1>
+        <div id="Home_content"  runat="server" style="width:1200px">                       <%-- Content --%>
+            <div id="Home_info" runat="server">                                            <%-- Content_1 search part --%>
+                <h1 style="">A route that we record our journeys.   </h1>
 
                 <div id="Home_search" runat="server">
                     <asp:Textbox runat="server"/>
@@ -117,16 +133,21 @@
 
             </div>
 
-            <div id="top_blog" runat="server" >
+            <div id="Home_top_blog" runat="server" >
                 <h2>Top Blog</h2>
+                <asp:Button ID="disc_blog" runat="server" Text="Discover more" OnClick="disc_blog_Click" />
             </div>
 
-            <div id="top_photo" runat="server">
+            <div id="Home_top_photo" runat="server">
                 <h2>Top Photo</h2>
+                <asp:Button ID="disc_photo" runat="server" Text="Discover more" OnClick="disc_photo_Click" />
             </div>
 
-            <div id="top_destination">
-                 <h2>Top Destination</h2>
+            <div id="Home_top_destination">
+                <h2>Top Destination</h2>
+                <asp:Button ID="disc_dest" runat="server" Text="Discover more" OnClick="disc_dest_Click" />
+                
+                
             </div>
 
         </div>

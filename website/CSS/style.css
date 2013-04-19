@@ -22,7 +22,7 @@ label {
 	outline: 0;
 }
 .loginform {
-	width: 300px;
+	width: 460px;
 	
 	background-color: rgba(250,250,250,0.5);
 	border-radius: 5px;
@@ -33,12 +33,13 @@ label {
 .loginform ul {
 	padding: 0;
 	margin: 0;
+    height: 408px;
 }
 .loginform li {
 	display: inline;
 	float: left;
     width: 256px;
-    height: 52px;
+    height: 84px;
 }
 .loginform input:not([type=submit]) {
 	padding: 5px;
