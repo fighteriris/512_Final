@@ -28,7 +28,16 @@
                
             <div id="left_col" style="border:solid;float:left">
                 <div id="Input_new" style="border-style: groove; width:400px;height:355px; float:left">
-                    <asp:TextBox ID="blog_text" runat="server" Height="187px" Width="383px"></asp:TextBox>
+                   
+                    <script type="text/javascript" src="JQ/nicEdit-latest.js"></script>
+                     <script>
+                         //<![CDATA[
+                         bkLib.onDomLoaded(function () { nicEditors.allTextAreas() });
+                         //]]>
+                     </script>
+                   <textarea name="area3" style="width: 300px; height: 100px;">
+      
+                    </textarea>
                     <br />
                     <br />
                     <asp:TextBox ID="destination" runat="server"></asp:TextBox>
