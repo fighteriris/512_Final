@@ -15,21 +15,17 @@
     
 <body>
 
-    <form id="Personal_form" runat="server" style="width:1200px">                                            <%-- Personal_form --%>
+    <form id="Personal_form" runat="server" >                                            <%-- Personal_form --%>
         
-        <div id="Personal_topbar" runat="server">                                           <%-- Personal_topbar --%>
+        <div class="Home_topbar" runat="server">                                           <%-- Personal_topbar --%>
             <div id="Personal_topbar_else">                                                     <%-- logo and other button --%>
                 <img id="Personal_logo" src="Home_BG/logo.png"  alt="logo" />
              </div>
 
-            <div id="Personal_login" runat="server">                                            <%-- login part --%>
-                xucongcong    log out
-
-            </div> 
         
         </div>
-        <div id="Personal_content" runat="server">                                            <%-- login part --%>
-                Here is content!!!!!!
+        <div class="content" runat="server">                                            <%-- login part --%>
+               
             <div id="left_col" style="border:solid;float:left">
                 <div id="Input_new" style="border-style: groove; width:400px;height:355px; float:left">
                     <asp:TextBox ID="blog_text" runat="server" Height="187px" Width="383px"></asp:TextBox>
