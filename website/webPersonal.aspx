@@ -24,8 +24,10 @@
 
         
         </div>
-        <div class="content" runat="server">                                            <%-- login part --%>
-               
+        <div class="content" runat="server">    
+            <div id="personal_info" runat="server">
+             
+                </div>
             <div id="left_col" style="border:solid;float:left">
                 <div id="Input_new" style="border-style: groove; width:400px;height:355px; float:left">
                    

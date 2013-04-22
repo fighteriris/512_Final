@@ -10,6 +10,17 @@
     _top: expression_r(documentElement.scrollTop + documentElement.clientHeight-this.offsetHeight); overflow:visible;
     bottom: 181px;
 }
+.Home_topbar_else
+{
+    width:400px;
+    height:50px;
+    float:left;
+    }
+.Home_logo {
+    width:150px;
+    
+    
+}
 .topbar_button
 {
     height:54px;
@@ -24,9 +35,34 @@
 
 .content
 {
-    height:auto;
+    height:700px;
     width:auto;
     margin-top:54px;
     margin-left:10%;
-    margin-right:10%;
+    margin-right:10%;    
+    border-style:solid;
 }
+    .content input[type=submit]
+    {
+        
+        border: 1px solid rgba(0, 0, 0, 0.3);
+	background:#276195; /* Old browsers */
+	background: -moz-linear-gradient(top,  #fff 0%, #276195 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(100%,#276195)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #fff 0%,#276195 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #fff 0%,#276195 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #fff 0%,#276195 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #fff 0%,#276195 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#276195',GradientType=0 ); /* IE6-9 */
+	color: #fff;
+	padding: 5px 15px;
+	border-radius: 3px;
+	text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+    margin-right: 10px;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	border-radius: 3px;
+	box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.1), 
+				0px 1px 0px 0px rgba(250, 250, 250, 0.5) ;
+    
+    }
+    

@@ -1,19 +1,9 @@
-﻿body
+﻿#personal_info
 {
-}
+    height:100px;
+    width:auto;
+    border-style:solid;
 
-
-#Personal_topbar
-{
-    background-color:#276195; z-index:999; position:fixed; top:0px; left:0px; 
-    height:54px;
-    width:1200px;
-    _position:absolute;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    _top: expression_r(documentElement.scrollTop + documentElement.clientHeight-this.offsetHeight); 
-    overflow:visible;
-    bottom: 252px;
 }
 #Personal_topbar_else
 {

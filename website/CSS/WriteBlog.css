@@ -1,0 +1,39 @@
+﻿
+#Input_new
+{
+    width:inherit;
+    height:500px;
+}
+#Input_title
+{
+    font-family:Arial;
+    font-size:20px;
+}
+#Input_tags
+{
+    margin-top:5px;
+    font-family:Arial;
+    font-size:20px;
+}
+#Access
+{
+    margin-top:5px;
+    font-family:Arial;
+    font-size:20px;
+}
+.wb_buttonr
+{
+    padding-left:40%;
+    margin-top:30px;
+    width:10%;
+    height:20px;
+    float:left;
+}
+.wb_buttonl
+{
+    
+    margin-top:30px;
+    width:50%;
+    height:20px;
+    float:left;
+}
