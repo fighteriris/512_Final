@@ -23,7 +23,7 @@
 
 			<div class="Home_status" runat="server">
 				<%-- Content --%>
-				<ul id="Home_login_table">
+				<ul >
 					<li style="margin-right: 100px">
 						<div class="float-right">
 							<section id="login">
