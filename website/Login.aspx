@@ -2,7 +2,7 @@
 
 <asp:Content ContentPlaceHolderID="MainContent" runat="server">
     
-	<section class="loginform cf" style="margin-right: 20%; margin-left: 35%; margin-top: 2%; margin-top:55px;">
+	<section class="loginform cf" style="margin-right: 20%; margin-left: 35%; margin-top: 2%; margin-top:70px;">
         <link href="CSS/Reg_page.css" rel="stylesheet" />
 		<div id="login_page" >
 			<div id="regist_header">
