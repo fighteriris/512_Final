@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="Stylesheet" type="text/css" href="CSS/Home_page.css" />
+	<link rel="stylesheet" href="CSS/style.css" />
+	<script src="JQ/jquery-1.9.1js"></script>
+	<title></title>
+	<asp:ContentPlaceHolder ID="head" runat="server">
+	</asp:ContentPlaceHolder>
+</head>
+<body>
+	<form id="form1" runat="server">
+		<div id="Home_topbar" runat="server">
+			<div id="Home_topbar_else">
+				<img id="Home_logo" src="Home_BG/logo.png" alt="logo" />
+			</div>
+
+			<div id="Home_status" runat="server">
+				<%-- Content --%>
+				<ul id="Home_login_table">
+					<li style="margin-right: 100px">
+						<div class="float-right">
+							<section id="login">
+								<asp:LoginView ID="LoginView1" runat="server" ViewStateMode="Disabled">
+									<AnonymousTemplate>
+										<ul>
+											<li><a id="registerLink" runat="server" href="~/Regist.aspx" style="color: white">Register</a></li>
+											<li><a id="loginLink" runat="server" href="~/Login.aspx" style="color: white">Log in</a></li>
+										</ul>
+									</AnonymousTemplate>
+									<LoggedInTemplate>
+										<p style="width: 200px; margin: 0; font-size:medium">
+											Hello, <a id="A1" runat="server" class="username" href="~/Account/Manage" title="Manage your account">
+												<asp:LoginName ID="LoginName1" runat="server"/>
+											</a>!
+										<asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/Login.aspx" />
+										</p>
+									</LoggedInTemplate>
+								</asp:LoginView>
+							</section>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<asp:ContentPlaceHolder ID="MainContent" runat="server">
+		</asp:ContentPlaceHolder>
+	</form>
+</body>
+</html>

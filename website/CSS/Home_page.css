@@ -23,7 +23,7 @@ left:2px;
 }
 #Home_topbar_else
 {
-    width:400px;
+    width:100px;
     height:50px;
     float:left;
     }
@@ -36,10 +36,6 @@ left:2px;
 
 }
 
-
-    
-
-
 #Home_status label{
 	display: block;
 	color:white;
@@ -47,7 +43,7 @@ left:2px;
 #Home_status ul {
 	padding-top:3px ;
 	margin: 0;
-    float:left;
+    float:right;
     height:0px;
     width:600px;
     font-family:Arial;
@@ -55,7 +51,7 @@ left:2px;
 #Home_status li {
 	display: inline;
 	float: left;
-    width: 205px;
+    width: 70px;
     height: 50px;
 	padding-top:10px;
 }
@@ -101,6 +97,7 @@ left:1px;
     background-image:url('../homeback.jpg'); 
     background-repeat:no-repeat;
 }
+
 #Home_info
 {
     
@@ -147,9 +144,8 @@ left:1px;
 }
 
 #Home_logo {
-    width:150px;
-    
-    
+    width:164px;
+	height: 90px;
 }
 
 #Home_top_blog 
