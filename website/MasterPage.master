@@ -7,6 +7,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link rel="Stylesheet" type="text/css" href="CSS/Home_page.css" />
 	<link rel="stylesheet" href="CSS/style.css" />
+    <script src="JQ/resize.js"></script>
 	<script src="JQ/jquery-1.9.1js"></script>
 	<title></title>
 	<asp:ContentPlaceHolder ID="head" runat="server">

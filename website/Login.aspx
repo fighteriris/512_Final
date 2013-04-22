@@ -1,8 +1,10 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="Login" MasterPageFile="~/MasterPage.master" %>
 
 <asp:Content ContentPlaceHolderID="MainContent" runat="server">
+    
 	<section class="loginform cf" style="margin-right: 20%; margin-left: 35%; margin-top: 2%; margin-top:55px;">
-		<div id="login_page" style="width: auto; margin-right: 10%; margin-left: 10%; height: 277px;">
+        <link href="CSS/Reg_page.css" rel="stylesheet" />
+		<div id="login_page" >
 			<div id="regist_header">
 				<h1>Welcome to Travel Tracer! </h1>
 				<br />
