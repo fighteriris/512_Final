@@ -26,51 +26,39 @@
         </div>
         <div class="content" runat="server">    
             <div id="personal_info" runat="server">
-             
-                </div>
-            <div id="left_col" style="border:solid;float:left">
-                <div id="Input_new" style="border-style: groove; width:400px;height:355px; float:left">
-                   
-                    <script type="text/javascript" src="JQ/nicEdit-latest.js"></script>
-                     <script>
-                         //<![CDATA[
-                         bkLib.onDomLoaded(function () { nicEditors.allTextAreas() });
-                         //]]>
-                     </script>
-                   <textarea name="area3" style="width: 300px; height: 100px;">
-      
-                    </textarea>
-                    <br />
-                    <br />
-                    <asp:TextBox ID="destination" runat="server"></asp:TextBox>
-                    <br />
-                    <br />
-                    <asp:Button ID="submit_blog" runat="server" Text="submit" OnClick="submit_blog_Click" />  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <br />
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <br />
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    
-                </div>
-                <br />
-                <br />
-                <div id="add_new_friends" style="border:groove;width:300px;">
-                    Add new friends:
-                    <br />
-                    <asp:TextBox ID="add_new_id" runat="server"></asp:TextBox>
-                    <asp:Button ID="add_new_button" runat="server" Text="Add" />
-                    <br />
-                    <asp:ListBox ID="friends_list" runat="server"></asp:ListBox>
-
-                </div>
-            </div>
-            <div id="right_col" style="border-style: solid; border-color: inherit; border-width: medium; float:left; width: 741px;">
-                <div id="friends_news" style="border: groove; margin-left:auto;margin-right:auto; border-width: medium; width:700px; height:800px;">
-                    <h3>Friends's news</h3>
-                </div>
                 
-            </div>
+             <div class ="personal_info_col">
+                </div>
+                 <div class ="personal_info_col">
+                     <span>
+                     <a href="WriteBlog.aspx">New Blog </a>
+                         </span>
+                </div>
+                 <div class ="personal_info_col">
+                      <span>
+                     <a onclick="popfldiv();" href="#" class="clickthis">Upload Image</a>
+                          <script type="text/javascript">
+                              function popfldiv() {
+                                  document.getElementById('personal_upload').style.display = (document.getElementById('personal_upload').style.display == 'none') ? 'block' : 'none';// feilong.org/onclick-a-link-popout-div
+                              }
+</script>
+                         </span>
+                </div>
+                </div>
+            <div id="personal_upload" runat="server">
+                <asp:label Text="Tags" runat="server"/>
+                <asp:textbox ID="img_tags" runat="server"/>
+                <asp:FileUpload ID="FileUpload1" runat="server" />
+                <asp:Button ID="img_upload" runat="server" Text="Upload" OnClick="img_upload_Click" />
+                <asp:Button ID="img_cancel" runat="server" Text="Cancel" />
+                <a onclick="popfldiv();" href="#" class="popback">Back</a>
+                <asp:label ID="Upload_re" runat="server"/>
+                </div>
+            <div id="personal_blog" runat="server">
 
+            </div>
+            <div id="personal_image" runat="server">
+                </div>
         </div> 
         
 

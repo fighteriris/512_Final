@@ -5,7 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link rel="Stylesheet" type="text/css" href="CSS/Home_page.css" />
+	<link rel="Stylesheet" type="text/css" href="CSS/Global.css" />
+    
 	<link rel="stylesheet" href="CSS/style.css" />
     <script src="JQ/resize.js"></script>
 	<script src="JQ/jquery-1.9.1js"></script>
@@ -15,12 +16,12 @@
 </head>
 <body>
 	<form id="form1" runat="server">
-		<div id="Home_topbar" runat="server">
-			<div id="Home_topbar_else">
-				<img id="Home_logo" src="Home_BG/logo.png" alt="logo" />
+		<div class="Home_topbar" runat="server">
+			<div class="Home_topbar_else">
+				<img class="Home_logo" src="Home_BG/logo.png" alt="logo" />
 			</div>
 
-			<div id="Home_status" runat="server">
+			<div class="Home_status" runat="server">
 				<%-- Content --%>
 				<ul id="Home_login_table">
 					<li style="margin-right: 100px">
