@@ -1,21 +1,13 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="webPersonal.aspx.cs" Inherits="webPersonal" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="webPersonal.aspx.cs" Inherits="webPersonal" MasterPageFile="~/MasterPage.master" %>
 
-<!DOCTYPE html>
+     
+ <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-     <link rel="Stylesheet" type="text/css"href="CSS/Global.css" />
+    <link rel="Stylesheet" type="text/css"href="CSS/Global.css" />
     <link rel="Stylesheet" type="text/css"href="CSS/webPersonal.css" />
     
     <link rel="stylesheet" href="CSS/normalize.css"/>
-	<link rel="stylesheet" href="CSS/style.css"/>
-    <title></title>
-</head>
-    
-<body>
-
-    <form id="Personal_form" runat="server" >                                            <%-- Personal_form --%>
+	<link rel="stylesheet" href="CSS/style.css"/>            <%-- Personal_form --%>
         
         <div class="Home_topbar" runat="server">                                           <%-- Personal_topbar --%>
             <div id="Personal_topbar_else">                                                     <%-- logo and other button --%>
@@ -86,8 +78,6 @@
             <div id="personal_image" runat="server">
                 </div>
         </div> 
-        
+    
 
-    </form>
-</body>
-</html>
+     </asp:Content>
