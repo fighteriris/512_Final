@@ -5,10 +5,10 @@
 	<section class="loginform cf" style="margin-right: 20%; margin-left: 35%; margin-top: 2%; margin-top: 70px;">
 		<link href="CSS/Reg_page.css" rel="stylesheet" />
 		<div id="login_page">
-			<disv id="regist_header">
+			<div id="regist_header">
 				<h1>Welcome to Travel Tracer! </h1>
 				<br />
-			</disv>
+			</div>
 			<br />
 
 			<div id="Re_Content">

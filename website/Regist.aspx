@@ -10,7 +10,7 @@
 			</div>
 			<br />
 			<div id="Re_Content">
-				<asp:CreateUserWizard ID="CreateUserWizard1" runat="server" Height="334px" Width="320px" ActiveStepIndex="1" ContinueDestinationPageUrl="~/HomeCopy.aspx">
+				<asp:CreateUserWizard ID="CreateUserWizard1" runat="server" Height="334px" Width="320px" ContinueDestinationPageUrl="~/HomeCopy.aspx">
 					<WizardSteps>
 						<asp:CreateUserWizardStep runat="server" />
 						<asp:CompleteWizardStep runat="server" />
