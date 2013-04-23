@@ -43,47 +43,25 @@
             <div class="personal_blog_row" runat="server">
 			<asp:Label ID="testlabel" runat="server" />
             </div>
-            <asp:BulletedList ID="BulletedList1" runat="server">
-        </asp:BulletedList>
-			<script>
-				function createDiv() {
-					var divs = document.createElement("DIV");	    //动态创建DIV 
-					//var divs = document.getElementById("divs");
-					divs.className = "personal_blog_row";
-                    /*
-					for (var j = 0; j < 3; j++) {
-						var uu = "ul" + j;
-						uu = document.createElement("UL");
-						uu.className = "ul1";
-						for (var i = 0; i < 4; i++) {
-							var ll = "li" + i;
-							var ll = document.createElement("LI");
-							ll.className = "li1";
-							ll.innerText = "222" + i;
-							uu.appendChild(ll);
-						}
-						divs.appendChild(uu);
-					}
-					*/
-					var span = "span";
-					span = document.createElement("span");
-					var Lnk = "www.google.com";
-					span.innerHTML = '<a href=' + Lnk + '>www.google.com</a>';
-					
-					//span.onclick.dd();
-					divs.appendChild(span);
-					divs.id = "newDiv";
-
-					document.getElementById("MainContent_personal_blog").appendChild(divs);
-				}
-				var i = 0;
-				for (i = 0; i < 5; i++) {
-				    createDiv();
-				}
-				function dd() {
-				    alert("fufufufufuf u");
-				}
-			</script>
+            <div id="Div3" class="personal_blog_row" runat="server">
+			<asp:Label ID="Label1" runat="server" />
+            </div>
+            <div id="Div4" class="personal_blog_row" runat="server">
+			<asp:Label ID="Label2" runat="server" />
+            </div>
+            <div id="Div5" class="personal_blog_row" runat="server">
+			<asp:Label ID="Label3" runat="server" />
+            </div>
+            <div id="Div2" class="personal_blog_row" runat="server">
+			<asp:Label ID="Label4" runat="server" />
+            </div>
+            <div id="Div6" class="personal_blog_row" runat="server">
+			<asp:Label ID="Label5" runat="server" />
+            </div>
+            <div id="Div7" class="personal_blog_row_l" runat="server">
+			<asp:button Text="Pre" runat="server"/>
+                <asp:button Text="Next" runat="server"/>
+            </div>
 		</div>
 		<div id="personal_image"  class="personal_image" runat="server">
 			<div id="Div1" class="personal_image_row" runat="server">
@@ -91,8 +69,7 @@
 				<br />
 				<img src="" id="image_1" class="personal_image_row_image" runat="server" />
 			</div>
-			<div id="Div2" class="personal_image_row" runat="server">
-			</div>
+			
 
 		</div>
 	    

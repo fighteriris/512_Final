@@ -33,7 +33,6 @@ public partial class webPersonal : System.Web.UI.Page
            String _date = testRow["Blog_date"].ToString();
            if (_title != null && _date != null)
            {
-               
                tmp++;
            }
         }

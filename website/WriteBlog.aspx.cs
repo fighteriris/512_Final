@@ -34,7 +34,7 @@ public partial class WriteBlog : System.Web.UI.Page
             String Blog_writer = "Shaobin";
             int flg = blog_acc.SelectedIndex;
             int Blog_acc =1;
-            int Id = 232323;
+            int Id = 1111;
             if (flg == 1)
             {
                 Blog_acc = 1;
