@@ -72,6 +72,7 @@
     {
         
         border: 1px solid rgba(0, 0, 0, 0.3);
+        background-color:transparent;
 	background:#276195; /* Old browsers */
 	background: -moz-linear-gradient(top,  #fff 0%, #276195 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(100%,#276195)); /* Chrome,Safari4+ */

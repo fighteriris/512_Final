@@ -30,6 +30,7 @@
 				</span>
 			</div>
 		</div>
+
 		<div id="personal_upload" runat="server">
 			<asp:Label Text="Tags" runat="server" />
 			<asp:TextBox ID="img_tags" runat="server" />
@@ -39,41 +40,107 @@
 			<a onclick="popfldiv();" href="#" class="popback">Back</a>
 			<asp:Label ID="Upload_re" runat="server" />
 		</div>
+        <div id="pic" runat="server">
+        </div>
+       
+        <table width="宽度" border="0"> 
+
+</table>
+
+
+
+        <div id="personal_image"  class="personal_image" runat="server">
+            <link type="text/css" href="../../styles/left.css" rel="stylesheet" />
+		<script type="text/javascript" src=" https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+        <script type="text/javascript" src="../../lib/jquery.jcarousel.min.js"></script>
+		<script type="text/javascript" src="../../lib/jquery.pikachoose.min.js"></script>
+		<script language="javascript">
+		    $(document).ready(function () {
+		        $("#pikame").PikaChoose({ carousel: true, carouselVertical: true });
+		    });
+		</script>
+           
+
+			<div id="Div_image" class="personal_image_row" runat="server">
+				<asp:Label ID="image_label1" runat="server" />
+				<div class="pikachoose">
+	<ul id="pikame" class="jcarousel-skin-pika">
+        <script>
+            alert("dddd");
+            var numof_img = 2;
+            var j = 1;
+            //for (i = 1; i < numof_img; i++) { //i表示你总共要放多少行图片 
+                //document.write("<li>")
+                //m = (3 * i) + 1 //表示每开头图片编号 
+                for (j = 1; j < 5; j++) { //j表示你每行放多少图片 
+                    //n = m + j //加j用来设置该行起始图片编号 
+                    alert("aaaa");
+                    document.write("<li><img src=\"../../"+j+".jpg\" />")
+                    //document.write(n)
+                    //document.write(".gif width=图片宽度 height=图片高度>")//这三行是用来调用图片 
+                    //document.write("</td>")
+                    document.write("</li>")
+                }           
+</script> 
+      
+		</ul>
+</div>
+				
+			</div>
+			
+
+		</div>
+	    
 		<div id="personal_blog" class="personal_blog" runat="server">
 
-            <div class="personal_blog_row" runat="server">			
-                
-            </div>
-            <div id="Div3" class="personal_blog_row" runat="server">
-			
-            </div>
-            <div id="Div4" class="personal_blog_row" runat="server">
-			
-            </div>
-            <div id="Div5" class="personal_blog_row" runat="server">
-			
+            <div id="DIV1" class="personal_blog_row" runat="server">			
+                <asp:label ID="title1" Text="this is a title" Font-Size="Large"  runat="server"/>
+                <br/>
+                <asp:label id="blog1_con" Text="this is a content" Font-Size="Small" runat="server"/>
+                <br/>
+                <a href="single_blog.aspx">Read More</a>
             </div>
             <div id="Div2" class="personal_blog_row" runat="server">
-			
+			     <asp:label ID="Label1" Text="this is a title" Font-Size="Large"  runat="server"/>
+                <br/>
+                <asp:label id="Label2" Text="this is a content" Font-Size="Small" runat="server"/>
+                <br/>
+                <a href="single_blog.aspx">Read More</a>
+            </div>
+            <div id="Div3" class="personal_blog_row" runat="server">
+			 <asp:label ID="Label3" Text="this is a title" Font-Size="Large"  runat="server"/>
+                <br/>
+                <asp:label id="Label4" Text="this is a content" Font-Size="Small" runat="server"/>
+                <br/>
+                <a href="single_blog.aspx">Read More</a>
+            </div>
+            <div id="Div4" class="personal_blog_row" runat="server">
+			 <asp:label ID="Label5" Text="this is a title" Font-Size="Large"  runat="server"/>
+                <br/>
+                <asp:label id="Label6" Text="this is a content" Font-Size="Small" runat="server"/>
+                <br/>
+                <a href="single_blog.aspx">Read More</a>
+            </div>
+            <div id="Div5" class="personal_blog_row" runat="server">
+			 <asp:label ID="Label7" Text="this is a title" Font-Size="Large"  runat="server"/>
+                <br/>
+                <asp:label id="Label8" Text="this is a content" Font-Size="Small" runat="server"/>
+                <br/>
+                <a href="single_blog.aspx">Read More</a>
             </div>
             <div id="Div6" class="personal_blog_row" runat="server">
-			
+			 <asp:label ID="Label9" Text="this is a title" Font-Size="Large"  runat="server"/>
+                <br/>
+                <asp:label id="Label10" Text="this is a content" Font-Size="Small" runat="server"/>
+                <br/>
+                <a href="single_blog.aspx">Read More</a>
             </div>
             <div id="Div7" class="personal_blog_row_l" runat="server">
 			<asp:button Text="Pre" runat="server"/>
                 <asp:button Text="Next" runat="server"/>
             </div>
 		</div>
-		<div id="personal_image"  class="personal_image" runat="server">
-			<div id="Div1" class="personal_image_row" runat="server">
-				<asp:Label ID="image_label1" runat="server" />
-				<br />
-				<img src="" id="image_1" class="personal_image_row_image" runat="server" />
-			</div>
-			
-
-		</div>
-	    
+		
 	</div>
 
 
