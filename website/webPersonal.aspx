@@ -23,12 +23,12 @@
                 </div>
                  <div class ="personal_info_col">
                      <span>
-                     <a href="WriteBlog.aspx">New Blog </a>
+                     <a href="WriteBlog.aspx" style="color:#808080">New Blog </a>
                          </span>
                 </div>
                  <div class ="personal_info_col">
                       <span>
-                     <a onclick="popfldiv();" href="#" class="clickthis">Upload Image</a>
+                     <a onclick="popfldiv();" href="#" class="clickthis" style="color:#808080">Upload Image</a>
                           <script type="text/javascript">
                               function popfldiv() {
                                   document.getElementById('personal_upload').style.display = (document.getElementById('personal_upload').style.display == 'none') ? 'block' : 'none';// feilong.org/onclick-a-link-popout-div
@@ -46,15 +46,20 @@
                 <a onclick="popfldiv();" href="#" class="popback">Back</a>
                 <asp:label ID="Upload_re" runat="server"/>
                 </div>
-            <div id="personal_blog" runat="server">
-                <style>                    .divcss
-                    {border-style:solid;
+            <div id="personal_blog"  runat="server">
+                <asp:label id="testlabel"   runat="server"/>
+                <style>                   
+                     .divcss
+                    {
+                         border-style:solid;
+                         width:50%;
+                         height:100px;
                     }
                     </style>
                 <script >
                     function createDiv() {
-                        //	 var divs = document.createElement("DIV");	    //动态创建DIV 
-                        var divs = document.getElementById("divs");
+                        var divs = document.createElement("DIV");	    //动态创建DIV 
+                        //var divs = document.getElementById("divs");
                         divs.className = "divcss";
                         for (var j = 0; j < 3; j++) {
                             var uu = "ul" + j;
@@ -69,13 +74,27 @@
                             }
                             divs.appendChild(uu);
                         }
+                        var aElement = document.createElement("href");
+                        aElement.name = inputFileID;
+                        aElement.id = inputFileID;
+                        aElement.type = "href";
+                        divs.applyElement(span);
                         divs.id = "newDiv";
-                        document.body.appendChild(divs);
+                        
+                        document.getElementById("MainContent_personal_blog").appendChild(divs);
                     }
                     createDiv();
 </script>
             </div>
-            <div id="personal_image" runat="server">
+            <div id="personal_image" runat="server">             
+                 <div id="Div1" class="personal_image_row" runat="server">
+                     <asp:label ID="image_label1"  runat="server"/>
+                     <br/>
+                     <img src="" id="image_1" class="personal_image_row_image" runat="server"/>
+                    </div>
+                 <div id="Div2"  class="personal_image_row" runat="server">
+                    </div>
+
                 </div>
         </div> 
     
