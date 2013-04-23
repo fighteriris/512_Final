@@ -4,16 +4,16 @@
 }
 
 .footer {
-    margin-top:3px;
 	color: white;
 	font-size: 14px;
 	background-color: #0D98BA;
 	text-align: right;
 	background-image: url("/resources/noisy-texture.png");
 	min-width: 900px;
-    position:fixed;
-    bottom:0;
-    width:100%;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
 }
 
 .footer a:link, .footer a:visited {
