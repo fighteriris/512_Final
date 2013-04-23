@@ -55,7 +55,33 @@
                 <asp:label ID="Upload_re" runat="server"/>
                 </div>
             <div id="personal_blog" runat="server">
-
+                <style>                    .divcss
+                    {border-style:solid;
+                    }
+                    </style>
+                <script >
+                    function createDiv() {
+                        //	 var divs = document.createElement("DIV");	    //动态创建DIV 
+                        var divs = document.getElementById("divs");
+                        divs.className = "divcss";
+                        for (var j = 0; j < 3; j++) {
+                            var uu = "ul" + j;
+                            uu = document.createElement("UL");
+                            uu.className = "ul1";
+                            for (var i = 0; i < 4; i++) {
+                                var ll = "li" + i;
+                                var ll = document.createElement("LI");
+                                ll.className = "li1";
+                                ll.innerText = "222" + i;
+                                uu.appendChild(ll);
+                            }
+                            divs.appendChild(uu);
+                        }
+                        divs.id = "newDiv";
+                        document.body.appendChild(divs);
+                    }
+                    createDiv();
+</script>
             </div>
             <div id="personal_image" runat="server">
                 </div>

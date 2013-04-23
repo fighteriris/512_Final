@@ -55,7 +55,7 @@
                      <div id="myNicPanel" style="width: 100%;" runat="server">
 
                      </div>
-                  <textarea id="myInstance1" style="width:100%;height:500px;overflow-y:scroll;" runat="server">
+                  <textarea id="myInstance1" style="width:100%;height:500px;overflow-y:scroll;overflow-x:scroll;" runat="server">
                   </textarea>
         
         <div id="Input_tags" runat="server">
@@ -74,7 +74,7 @@
             <asp:button  Text="Submit" runat="server" OnClick="Unnamed6_Click"/>
             </div>
         <div class="wb_buttonr" runat="server">
-            <asp:button Text ="Cancel" runat="server"/>
+            <asp:button Text ="Cancel" runat="server" OnClick="Unnamed5_Click"/>
             </div>
     </div>
         </div>

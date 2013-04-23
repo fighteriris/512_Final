@@ -59,6 +59,7 @@ public partial class WriteBlog : System.Web.UI.Page
             {
               
             }
+            Response.Redirect("webPersonal.aspx");
         }
 
     }
@@ -68,5 +69,9 @@ public partial class WriteBlog : System.Web.UI.Page
         return true;}
         else
             return false;
+    }
+    protected void Unnamed5_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("webPersonal.aspx");
     }
 }
