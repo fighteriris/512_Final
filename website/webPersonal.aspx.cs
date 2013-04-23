@@ -12,7 +12,8 @@ public partial class webPersonal : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        string ConStr = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+		personal_info_col1.Text = User.Identity.Name;
+        /*string ConStr = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
         SqlConnection myConn = new SqlConnection(ConStr);
         
         myConn.Open();
@@ -25,7 +26,7 @@ public partial class webPersonal : System.Web.UI.Page
         foreach (DataRow testRow in mydata.Tables["result_data"].Rows)
         {
             testlabel.Text = testRow["Blog_title"].ToString();
-        }
+        }*/
         //SqlCommand testCommand = myConn.CreateCommand();
         //testCommand.CommandText = sqlstr;
         /*
@@ -39,7 +40,6 @@ public partial class webPersonal : System.Web.UI.Page
             Upload_re.Text = "Upload failed";
         }
          */
-
     }
     protected void submit_blog_Click(object sender, EventArgs e)
     {
@@ -49,7 +49,6 @@ public partial class webPersonal : System.Web.UI.Page
     {
         if (FileUpload1.FileName.ToString() != null && img_tags!=null)
         {
-
             Byte[] Image_byte = FileUpload1.FileBytes;
             String Image_user = "Shaobin";
             String Image_date;

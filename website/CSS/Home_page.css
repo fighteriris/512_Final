@@ -1,7 +1,4 @@
 ﻿
-
-
-
 #Home_topbar
 {
     background-color:#276195; z-index:999; position:fixed; top:-5px; 
@@ -47,6 +44,7 @@ left:2px;
     height:0px;
     width:600px;
     font-family:Arial;
+	font-size: 40px;
 }
 #Home_status li {
 	display: inline;

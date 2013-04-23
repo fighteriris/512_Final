@@ -4,14 +4,11 @@
     height:507px;
 }
 
-#login_page {
-
-   width: auto; 
-   margin-right: 10%;
-    margin-left: 10%; 
-    height: 277px;
-
-
+.login_page {
+	width: 349px; 
+	margin-right: 10%;
+	margin-left: 10%; 
+	height: 277px;
 }
 
 

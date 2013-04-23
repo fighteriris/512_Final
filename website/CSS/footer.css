@@ -1,0 +1,30 @@
+﻿
+.footer, .push {
+	height: 40px;
+}
+
+.footer {
+	color: white;
+	font-size: 14px;
+	background-color: #0D98BA;
+	text-align: right;
+	background-image: url("/resources/noisy-texture.png");
+	min-width: 900px;
+}
+
+.footer a:link, .footer a:visited {
+    color:white;
+    text-decoration:none;
+    font-size:12px;
+    line-height:20px;
+}
+
+.footer a:hover {
+    color:#d14545;
+}
+
+.foot {
+    text-align:center;
+    width:300px;
+    margin:0 auto;
+}

@@ -18,7 +18,6 @@
 }
 .Home_logo {
     width:150px;
-  
 }
 .Home_status
 {
@@ -26,7 +25,6 @@
     height:50px;
     float:right;
     padding-left:15px;
-
 }
 
 .Home_status label{
@@ -48,12 +46,12 @@
     height: 50px;
 	padding-top:10px;
 }
+
 .topbar_button
 {
     height:54px;
     width:130px;
-    font-family:Arial;
-    
+    font-family:Arial; 
 }
     .topbar_button:hover
     {

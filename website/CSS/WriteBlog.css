@@ -1,4 +1,19 @@
-﻿
+﻿#myInstance1 {
+	border: 2px dashed #fff;
+	width: 100%;
+}
+
+.nicEdit-selected {
+	border: 2px solid #0026ff !important;
+}
+
+.nicEdit-panel {
+	background-color: #fff !important;
+}
+
+.nicEdit-button {
+	background-color: #fff !important;
+}
 #Input_new
 {
     width:inherit;

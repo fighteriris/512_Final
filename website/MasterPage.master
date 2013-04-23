@@ -6,8 +6,8 @@
 <head runat="server">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link rel="Stylesheet" type="text/css" href="CSS/Global.css" />
-
 	<link rel="stylesheet" href="CSS/style.css" />
+	<link href="CSS/footer.css" rel="stylesheet" />
 	<script src="JQ/resize.js"></script>
 	<script src="JQ/sliding.js"></script>
 	<script src="JQ/jquery-1.9.1js"></script>
@@ -28,14 +28,14 @@
 							<section id="login">
 								<asp:LoginView ID="LoginView1" runat="server" ViewStateMode="Disabled">
 									<AnonymousTemplate>
-										<ul>
+										<ul style="font-size:16px">
 											<li><a id="registerLink" runat="server" href="~/Regist.aspx" style="color: white">Register</a></li>
 											<li><a id="loginLink" runat="server" href="~/Login.aspx" style="color: white">Log in</a></li>
 										</ul>
 									</AnonymousTemplate>
 									<LoggedInTemplate>
 										<p style="width: 200px; margin: 0; font-size: medium">
-											Hello, <a id="A1" runat="server" class="username" href="~/Account/Manage" title="Manage your account">
+											Hello, <a id="A1" runat="server" class="username" href="~/webPersonal.aspx" title="Manage your account">
 												<asp:LoginName ID="LoginName1" runat="server" />
 											</a>!
 										<asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/Login.aspx" />
@@ -50,6 +50,15 @@
 		</div>
 		<asp:ContentPlaceHolder ID="MainContent" runat="server">
 		</asp:ContentPlaceHolder>
+		<div class="footer">
+            <div class="foot">
+                <a href="HomeCopy.aspx" target="_blank">About</a>&nbsp;|&nbsp;<a href="https://github.com/fighteriris/512_Final">Contact</a>
+                <br />
+                <div style="font-size: 10px">
+                    &copy; 2013 Trip Tracer
+                </div>
+            </div>
+        </div>
 	</form>
 </body>
 </html>

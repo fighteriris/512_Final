@@ -10,9 +10,5 @@
 
             </div>
             <asp:Button ID="single_blog_comment" runat="server" float="right" Text="Like it" />
-        </div>
- 
-    
-    
-        
+        </div>  
 </asp:Content>

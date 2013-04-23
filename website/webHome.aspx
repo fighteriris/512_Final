@@ -1,13 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="webHome.aspx.cs" Inherits="webHome" MasterPageFile="~/MasterPage.master"%>
 
-
-
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-
     <link href="CSS/Global.css" rel="stylesheet" />
-    <link href="CSS/Home_page.css" rel="stylesheet" />
-		
-
 		<div class="Home_content" runat="server">
 			<%-- Content --%>
 			<div id="Home_info" runat="server">
@@ -34,5 +28,4 @@
 				<asp:Button ID="disc_dest" runat="server" Text="Discover more" OnClick="disc_dest_Click" />
 			</div>
 		</div>
-
 </asp:Content>

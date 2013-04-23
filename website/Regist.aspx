@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Regist.aspx.cs" Inherits="Regist" MasterPageFile="~/MasterPage.master" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-	<section class="loginform cf" style="margin-right: 20%; margin-left: 35%; margin-top: 2%; height: 452px; margin-top: 70px;">
+	<section class="loginform cf" style="margin-right: 20%; margin-left: 35%; margin-top: 2%; height: 452px; margin-top: 70px; margin-bottom:5%">
 		<div id="regist_page" style="width: 404px; margin-right: 10%; margin-left: 10%;">
 			<div id="regist_header">
 				<h1>Welcome to Travel Tracer! </h1>
