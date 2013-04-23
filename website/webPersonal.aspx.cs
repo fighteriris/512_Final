@@ -10,10 +10,12 @@ using System.Web.UI.WebControls;
 
 public partial class webPersonal : System.Web.UI.Page
 {
+    
     protected void Page_Load(object sender, EventArgs e)
     {
+
 		personal_info_col1.Text = User.Identity.Name;
-        /*string ConStr = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+        string ConStr = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
         SqlConnection myConn = new SqlConnection(ConStr);
         
         myConn.Open();
@@ -23,10 +25,21 @@ public partial class webPersonal : System.Web.UI.Page
         DataSet mydata = new DataSet();
         adapter.Fill(mydata, "result_data");
         myConn.Close();
+        int tmp = 0;
+       
         foreach (DataRow testRow in mydata.Tables["result_data"].Rows)
         {
-            testlabel.Text = testRow["Blog_title"].ToString();
-        }*/
+           String _title = testRow["Blog_title"].ToString();
+           String _date = testRow["Blog_date"].ToString();
+           if (_title != null && _date != null)
+           {
+               
+               tmp++;
+           }
+        }
+       
+       
+          
         //SqlCommand testCommand = myConn.CreateCommand();
         //testCommand.CommandText = sqlstr;
         /*

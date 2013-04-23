@@ -57,24 +57,31 @@
     
 }
 
-#personal_blog
+.personal_blog
 {
 	margin-top:5px;
 	width:50%;
 	height:auto;
 	float:left;
 }
-
-#personal_image
+.personal_blog_row
+{
+    width:100%;
+    height:100px;
+    border-style:solid;
+}
+.personal_image
 {
 	margin-top:5px;
 	width:50%;
 	height:auto;
-	float:left;
+	float:right;
 }
 
 .personal_image_row
 {
+    margin-left:10px;
+    border-style:solid;
     padding-top:20px;
     padding-left:20px;
     padding-right:20px;

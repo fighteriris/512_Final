@@ -39,20 +39,18 @@
 			<a onclick="popfldiv();" href="#" class="popback">Back</a>
 			<asp:Label ID="Upload_re" runat="server" />
 		</div>
-		<div id="personal_blog" runat="server">
+		<div id="personal_blog" class="personal_blog" runat="server">
+            <div class="personal_blog_row" runat="server">
 			<asp:Label ID="testlabel" runat="server" />
-			<style>
-				.divcss {
-					border-style: solid;
-					width: 50%;
-					height: 100px;
-				}
-			</style>
+            </div>
+            <asp:BulletedList ID="BulletedList1" runat="server">
+        </asp:BulletedList>
 			<script>
 				function createDiv() {
 					var divs = document.createElement("DIV");	    //动态创建DIV 
 					//var divs = document.getElementById("divs");
-					divs.className = "divcss";
+					divs.className = "personal_blog_row";
+                    /*
 					for (var j = 0; j < 3; j++) {
 						var uu = "ul" + j;
 						uu = document.createElement("UL");
@@ -66,19 +64,28 @@
 						}
 						divs.appendChild(uu);
 					}
-					var aElement = document.createElement("href");
-					aElement.name = inputFileID;
-					aElement.id = inputFileID;
-					aElement.type = "href";
-					divs.applyElement(span);
+					*/
+					var span = "span";
+					span = document.createElement("span");
+					var Lnk = "www.google.com";
+					span.innerHTML = '<a href=' + Lnk + '>www.google.com</a>';
+					
+					//span.onclick.dd();
+					divs.appendChild(span);
 					divs.id = "newDiv";
 
 					document.getElementById("MainContent_personal_blog").appendChild(divs);
 				}
-				createDiv();
+				var i = 0;
+				for (i = 0; i < 5; i++) {
+				    createDiv();
+				}
+				function dd() {
+				    alert("fufufufufuf u");
+				}
 			</script>
 		</div>
-		<div id="personal_image" runat="server">
+		<div id="personal_image"  class="personal_image" runat="server">
 			<div id="Div1" class="personal_image_row" runat="server">
 				<asp:Label ID="image_label1" runat="server" />
 				<br />
@@ -88,6 +95,7 @@
 			</div>
 
 		</div>
+	    
 	</div>
 
 
