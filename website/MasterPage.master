@@ -6,9 +6,9 @@
 <head runat="server">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link rel="Stylesheet" type="text/css" href="CSS/Global.css" />
-    
+
 	<link rel="stylesheet" href="CSS/style.css" />
-    <script src="JQ/resize.js"></script>
+	<script src="JQ/resize.js"></script>
 	<script src="JQ/jquery-1.9.1js"></script>
 	<title></title>
 	<asp:ContentPlaceHolder ID="head" runat="server">
@@ -23,7 +23,7 @@
 
 			<div class="Home_status" runat="server">
 				<%-- Content --%>
-				<ul >
+				<ul>
 					<li style="margin-right: 100px">
 						<div class="float-right">
 							<section id="login">
@@ -35,9 +35,9 @@
 										</ul>
 									</AnonymousTemplate>
 									<LoggedInTemplate>
-										<p style="width: 200px; margin: 0; font-size:medium">
+										<p style="width: 200px; margin: 0; font-size: medium">
 											Hello, <a id="A1" runat="server" class="username" href="~/Account/Manage" title="Manage your account">
-												<asp:LoginName ID="LoginName1" runat="server"/>
+												<asp:LoginName ID="LoginName1" runat="server" />
 											</a>!
 										<asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/Login.aspx" />
 										</p>

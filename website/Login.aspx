@@ -1,21 +1,21 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="Login" MasterPageFile="~/MasterPage.master" %>
 
 <asp:Content ContentPlaceHolderID="MainContent" runat="server">
-    
-	<section class="loginform cf" style="margin-right: 20%; margin-left: 35%; margin-top: 2%; margin-top:70px;">
-        <link href="CSS/Reg_page.css" rel="stylesheet" />
-		<div id="login_page" >
-			<div id="regist_header">
+
+	<section class="loginform cf" style="margin-right: 20%; margin-left: 35%; margin-top: 2%; margin-top: 70px;">
+		<link href="CSS/Reg_page.css" rel="stylesheet" />
+		<div id="login_page">
+			<disv id="regist_header">
 				<h1>Welcome to Travel Tracer! </h1>
 				<br />
-			</div>
+			</disv>
 			<br />
 
 			<div id="Re_Content">
 				<ul>
 					<asp:Login ID="Login1" runat="server" DestinationPageUrl="~/HomeCopy.aspx">
 						<LayoutTemplate>
-							<table  style="border-collapse:collapse;">
+							<table style="border-collapse: collapse;">
 								<tr>
 									<td>
 										<table>
@@ -46,7 +46,7 @@
 												</td>
 											</tr>
 											<tr>
-												<td align="center" colspan="2" style="color:Red;">
+												<td align="center" colspan="2" style="color: Red;">
 													<asp:Literal ID="FailureText" runat="server" EnableViewState="False"></asp:Literal>
 												</td>
 											</tr>
