@@ -24,7 +24,7 @@
 					<a onclick="popfldiv();" href="#" class="clickthis" style="color: #808080">Upload Image</a>
 					<script type="text/javascript">
 						function popfldiv() {
-							document.getElementById('personal_upload').style.display = (document.getElementById('personal_upload').style.display == 'none') ? 'block' : 'none';// feilong.org/onclick-a-link-popout-div
+						    document.getElementById('MainContent_personal_upload').style.display = (document.getElementById('MainContent_personal_upload').style.display == 'none') ? 'block' : 'none';// feilong.org/onclick-a-link-popout-div
 						}
 					</script>
 				</span>
@@ -40,23 +40,24 @@
 			<asp:Label ID="Upload_re" runat="server" />
 		</div>
 		<div id="personal_blog" class="personal_blog" runat="server">
-            <div class="personal_blog_row" runat="server">
-			<asp:Label ID="testlabel" runat="server" />
+
+            <div class="personal_blog_row" runat="server">			
+                
             </div>
             <div id="Div3" class="personal_blog_row" runat="server">
-			<asp:Label ID="Label1" runat="server" />
+			
             </div>
             <div id="Div4" class="personal_blog_row" runat="server">
-			<asp:Label ID="Label2" runat="server" />
+			
             </div>
             <div id="Div5" class="personal_blog_row" runat="server">
-			<asp:Label ID="Label3" runat="server" />
+			
             </div>
             <div id="Div2" class="personal_blog_row" runat="server">
-			<asp:Label ID="Label4" runat="server" />
+			
             </div>
             <div id="Div6" class="personal_blog_row" runat="server">
-			<asp:Label ID="Label5" runat="server" />
+			
             </div>
             <div id="Div7" class="personal_blog_row_l" runat="server">
 			<asp:button Text="Pre" runat="server"/>

@@ -54,7 +54,7 @@
     padding-bottom:10px;
     height:50px;
     width:100%;
-    
+    display:none;
 }
 .bullet
 {
@@ -97,7 +97,13 @@
 }
 .personal_blog_row_l
 {
-    padding-left:40%;
+    padding-left:36%;
+}
+.blog_button
+{
+    background-color:white;
+    width:100%;
+    height:100px;
 }
 
 
