@@ -7,10 +7,10 @@
 		<script>
 			var _blogs = "<%=getContent()%>";
 			var blogs = new Array();
-			blogs = _blogs.split("#");
+			blogs = _blogs.split("^");
 			var thenew = document.createElement('div');
 			thenew.className = "single_content";
-			thenew.innerHTML ="<h>"+ blogs[0] +"</h>"+ "<span>" + blogs[1] + "</span>";
+			thenew.innerHTML = "<h1>" + blogs[0] + "</h1><br/>" + "<h2>" + blogs[2] + "&nbsp" + blogs[3] + "</h2><br/><span>" + blogs[1] + "</span>";
 
 			document.getElementById('single_blog').appendChild(thenew);
 					

@@ -30,9 +30,8 @@ public partial class WriteBlog : System.Web.UI.Page
             {
                 Blog_tags += i;
             }
-            System.DateTime currentTime=new System.DateTime();
-            String Blog_date = currentTime.ToString("t");
-            String Blog_writer = "Shaobin";
+			String Blog_date = System.DateTime.Now.ToString();
+            String Blog_writer = User.Identity.Name;
             int flg = blog_acc.SelectedIndex;
             int Blog_acc =1;
 			String Id = System.DateTime.Now.ToString();

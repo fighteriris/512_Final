@@ -49,9 +49,11 @@ public partial class single_blog : System.Web.UI.Page
 		{
 			String blogTitle = testRow["Blog_title"].ToString();
 			String blogContent = testRow["Blog_content"].ToString();
+			String blogWriter = testRow["Blog_writer"].ToString();
+			String blogDate = testRow["Blog_date"].ToString();
 			//title.Text = blogTitle + "\n" + blogContent;
 			//break;
-			res = blogTitle+"#" + blogContent;			
+			res = blogTitle + "^" + blogContent + "^" + blogWriter + "^" + blogDate;			
 		}
 		System.Diagnostics.Debug.WriteLine("res " + res);
 		return res;
