@@ -10,7 +10,7 @@
 			blogs = _blogs.split("#");
 			var thenew = document.createElement('div');
 			thenew.className = "single_content";
-			thenew.innerHTML = "<span>" + blogs + "</span>";
+			thenew.innerHTML ="<h>"+ blogs[0] +"</h>"+ "<span>" + blogs[1] + "</span>";
 
 			document.getElementById('single_blog').appendChild(thenew);
 					
