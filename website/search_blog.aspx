@@ -6,43 +6,13 @@
 		<%-- header background goes here --%>
 	</div>
 
-	<div id="Search_blog_content" style="width: 1200px; height: 1000px">
-
-		<div id="Search_blog_row_1" style="border: solid; width: 1200px; height: 250px; float: left;">
-			<div id="row1_1" style="border: solid;width: 800px; height: 250px;">
-				<h1 style="font-style: italic; color: blue; font-weight: 200;">Blog1</h1>
-			</div>
-			<div id="row1_2" style="border: groove;width: 400px; height: 250px;">
-				
-			</div>
-		</div>
-        <br />
-        <br />
-
-		<div id="Search_blog_row_2" style="border: solid; width: 1200px; height: 250px; float: left;">
-			<div id="row2_1" style="border: solid;width: 800px; height: 250px;">
-				<h1 style="font-style: italic; color: blue; font-weight: 200;">Blog2</h1>
-			</div>
-			<div id="row2_2" style="border: groove;width: 400px; height: 250px;">
-				
-			</div>
-		</div>
-		<br />
-        <br />
-
-        <div id="Search_blog_row_3" style="border: solid; width: 1200px; height: 250px; float: left;">
-			<div id="row3_1" style="border: solid;width: 800px; height: 250px;">
-				<h1 style="font-style: italic; color: blue; font-weight: 200;">Blog3</h1>
-			</div>
-			<div id="row3_2" style="border: groove;width: 400px; height: 250px;">
-				
-			</div>
-		</div>
-
+	<div id="Search_blog_content" style="width: 85%;margin:0 auto; height: 1000px; background:#ffffff" >  
         
-        
-
-	</div>
+        <div id="Search_blog_photo" style="width: 100%;height: 400px;">			
+				<img id="imgback" src="Search_Blog.jpg" style="width: 100%;height: 300px;margin:0 auto;" />										
+		</div>
+	</div>   
+	
 	<br />
 	<br />
 	<br />

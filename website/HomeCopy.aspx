@@ -9,40 +9,31 @@
                 <br />
 		<div id="Home_info" runat="server">
 			<%-- Content_1 search part --%>
-			<h1 style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A route that we record our journeys.   </h1>
+			<h1 style="color: #FFFFFF; font-size: 40px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A route that we record our journeys.   </h1>
 
 			<div id="Home_search" runat="server">
 			    <br />
+                <br />               
                 <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />                     
+                                    
 			</div>
 		</div>
 
-		<div id="Home_top_blog" runat="server" >
             			
-						           
-            <asp:Button ID="disc_blog" runat="server" Text="Discover top blogs" OnClick="disc_blog_Click" Height="40px" Width="180px" BackColor="White" BorderStyle="Outset" />
+		<div id="Home_content" runat="Server">	
+           <div id="Home_bar" runat="Server" style="margin:0 180px; width: 1400px;">			           
+            <asp:Button ID="disc_blog" runat="server" Text="Discover top blogs" OnClick="disc_blog_Click" Height="40px" Width="180px" BackColor="White" BorderStyle="Outset" Font-Size="Medium" ForeColor="#3399FF" />
 			
-			<asp:Button ID="disc_photo" runat="server" Text="Discover top photos" OnClick="disc_photo_Click" Height="40px" Width="180px" BackColor="White" BorderStyle="Outset" />
+			<asp:Button ID="disc_photo" runat="server" Text="Discover top photos" OnClick="disc_photo_Click" Height="40px" Width="180px" BackColor="White" BorderStyle="Outset" Font-Size="Medium" ForeColor="#3399FF" />
 			
-			<asp:Button ID="disc_dest" runat="server" Text="Discover top destinations " OnClick="disc_dest_Click" Height="40px" Width="280px" BackColor="White" BorderStyle="Outset"/>
+			<asp:Button ID="disc_dest" runat="server" Text="Discover top destinations " OnClick="disc_dest_Click" Height="40px" Width="280px" BackColor="White" BorderStyle="Outset" Font-Size="Medium" ForeColor="#3399FF"/>
 
             <asp:TextBox ID="Textbox1" runat="server" Width="200px" Height="35px" BorderColor="White" BorderStyle="Outset" />
-            <asp:Button ID="Search" runat="server" Text="Search"/>
-	     
+            <asp:ImageButton ID="ImageButton1" runat="server" Height="30px" ImageUrl="~/search icon.jpg" Width="30px" ImageAlign="Middle" />
+	     </div>
             
 		</div>
 
-		<div id="Home_top_photo" runat="server">
-			
-		</div>
-
-		<div id="Home_top_destination">
-			
-		</div>
+		
 	</div>
 </asp:Content>

@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="Login" MasterPageFile="~/MasterPage.master" %>
-
+    
 <asp:Content ContentPlaceHolderID="MainContent" runat="server">
 	<section class="loginform cf" style="margin-right: 20%; margin-left: 37%; margin-top: 2%; margin-top: 70px; margin-bottom:5%; height: 320px; width: 312px">
 		<link href="CSS/Reg_page.css" rel="stylesheet" />
