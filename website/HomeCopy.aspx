@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="HomeCopy.aspx.cs" Inherits="HomeCopy" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-	<div id="Div1" class="Home_content" runat="server" style="background-image:url('homeback2.jpg'); height:800px">
+	<div id="Div1" class="Home_content" runat="server" style="background-image:url('homebacksync.gif'); height:800px">
 		<%-- Content --%>
                 <br />
                 <br />

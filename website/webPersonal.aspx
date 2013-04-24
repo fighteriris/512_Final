@@ -4,7 +4,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 	<link rel="Stylesheet" type="text/css" href="CSS/Global.css" />
 	<link rel="Stylesheet" type="text/css" href="CSS/webPersonal.css" />
-
+    <script src="JQ/textualizer.min.js"></script>
+    <script src="JQ/textualizer.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<link rel="stylesheet" href="CSS/normalize.css" />
 	<link rel="stylesheet" href="CSS/style.css" />
 	<%-- Personal_form --%>
@@ -84,13 +86,24 @@
 		</div>
 
 		<div id="personal_blog" class="personal_blog" runat="server">
-
-			<div id="DIV1" class="personal_blog_row" runat="server">
-				<asp:Label ID="title1" Text="this is a title" Font-Size="Large" runat="server" />
-				<br />
-				<asp:Label ID="blog1_con" Text="this is a content" Font-Size="Small" runat="server" />
-				<br />
-				<a href="single_blog.aspx">Read More</a>
+           <script>
+              // var _imgs = "<%=getPath()%>";
+              // var imgs = new Array();
+               // imgs = _imgs.split(",");
+               
+               for (j = 0; j < 5; j++) {
+                   //alert("<li><img src=\"" + imgs[j] + "\"/>");
+                   document.write("<div class=\"personal_blog_row\">");
+                   document.write("<a href>dddddd</a>");
+                   document.write("<br/>");
+                   document.write("<span>aaaaaaadfdfadsfa");
+                   document.write("</span>");
+                   document.write("<br/>");
+                   document.write("</div>");
+               }
+						</script>
+			<div id="MainContent_txtlzr" class="personal_blog_row" runat="server">
+	
 			</div>
 			<div id="Div2" class="personal_blog_row" runat="server">
 				<asp:Label ID="Label1" Text="this is a title" Font-Size="Large" runat="server" />
