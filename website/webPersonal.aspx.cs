@@ -11,7 +11,33 @@ using System.Web.UI.WebControls;
 
 public partial class webPersonal : System.Web.UI.Page
 {
+	public String getPath() {
+		if (User.Identity.Name.Length == 0)
+		{
+			return null;
+		}
+		String[] result = new String[10];
+		String res = "";
+		string ConStr = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+		SqlConnection myConn = new SqlConnection(ConStr);
+		myConn.Open();
+		string sqlstr = "SELECT * FROM Images where (image_user ='" + User.Identity.Name + "')";
+		SqlDataAdapter adapter = new SqlDataAdapter(sqlstr, myConn);
+		DataSet mydata = new DataSet();
+		adapter.Fill(mydata, "result");
+		myConn.Close();
+		int tmp = 0;
 
+		foreach (DataRow testRow in mydata.Tables["result"].Rows)
+		{
+			String pathStr = testRow["image_path"].ToString();
+			res += pathStr + ",";
+			System.Diagnostics.Debug.WriteLine("here: " + result[tmp]);
+			tmp++;
+		}
+		
+		return res;
+	}
     public void create() {
         System.Diagnostics.Debug.WriteLine("dddd");
     }
@@ -95,10 +121,10 @@ public partial class webPersonal : System.Web.UI.Page
 			uploadLabel.Text = "Please upload a valid image";
 			return;
 		}
-		String directoryPath = Server.MapPath("Image") + "\\" + User.Identity.Name;
-		String relativePath = "Image\\" + User.Identity.Name + "\\" + fileName;
+		String directoryPath = Server.MapPath("Image") + "/" + User.Identity.Name;
+		String relativePath = "Image/" + User.Identity.Name + "/" + fileName;
 		//Label1.Text = imagePath;
-		String imagePath = directoryPath + "\\" + fileName;
+		String imagePath = directoryPath + "/" + fileName;
 		if (!System.IO.Directory.Exists(directoryPath))
 		{
 			System.IO.Directory.CreateDirectory(directoryPath);

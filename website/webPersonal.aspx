@@ -65,13 +65,13 @@
 				<asp:Label ID="image_label1" runat="server" />
 				<div class="pikachoose">
 					<ul id="pikame" class="jcarousel-skin-pika" onload="<%create();%>">
-						<script>
-
-							var numof_img = "<%=getnum()%>";
-							//alert("ddd=<%=getnum()%>");
-							var j = 1;
-							for (j = 1; j < 5; j++) {
-								document.write("<li><img src=\"" + j + ".jpg\" />")
+						<script>					
+						    var _imgs = "<%=getPath()%>";
+							var imgs = new Array();
+							imgs = _imgs.split(",");
+							for (j = 0; j < imgs.length-1; j++) {
+							//alert("<li><img src=\"" + imgs[j] + "\"/>");
+								document.write("<li><img src=\"" + imgs[j] + "\"/>")
 								document.write("</li>")
 							}
 						</script>
