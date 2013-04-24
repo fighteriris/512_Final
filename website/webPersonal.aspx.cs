@@ -67,34 +67,60 @@ public partial class webPersonal : System.Web.UI.Page
     }
     protected void img_upload_Click(object sender, EventArgs e)
     {
-        if (FileUpload1.FileName.ToString() != null && img_tags!=null)
-        {
-            Byte[] Image_byte = FileUpload1.FileBytes;
-            String Image_user = "Shaobin";
-            String Image_date;
-            String[] tags_tmp = img_tags.Text.Split(';');
-            String Image_tags=null;
-            int Id = 22222;
-            System.DateTime currentTime = new System.DateTime();
-            Image_date = currentTime.ToString("g");
-            foreach(String i in tags_tmp){
-                Image_tags += i;
-            }
-            string ConStr = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
-            SqlConnection myConn = new SqlConnection(ConStr);
-            myConn.Open();
-            string sqlstr = "INSERT INTO Image values('" + Id + "','" + Image_byte + "','" + Image_date + "','" + Image_user + "','" + Image_tags + "')";
-            SqlCommand testCommand = myConn.CreateCommand();
-            testCommand.CommandText = sqlstr;
-            try
-            {
-                testCommand.ExecuteNonQuery();
-                Upload_re.Text = "Upload Sucess";
-            }
-            catch (Exception es)
-            {
-                Upload_re.Text = "Upload failed";
-            }
-        }
+		uploadLabel.Text = "";
+		if (User.Identity.Name.Length == 0)
+		{
+			uploadLabel.Text = "Please login first to upload images!";
+			return;
+		}
+		if (img_tags.Text.Length == 0)
+		{
+			uploadLabel.Text = "Please input a tag to describe the image.";
+			return;
+		}
+		String fileName = FileUpload1.FileName;
+		if (fileName.Length == 0)
+		{
+			uploadLabel.Text = "The File Name cannot be empty";
+			return;
+		}
+		String fileType = fileName.Substring(fileName.LastIndexOf(".") + 1);
+		if ((fileType == "jpg") || (fileType == "png") || (fileType == "gif") || (fileType == "bmp") ||
+			(fileType == "ico"))
+		{
+			uploadLabel.Text = "valid image";
+		}
+		else
+		{
+			uploadLabel.Text = "Please upload a valid image";
+			return;
+		}
+		String directoryPath = Server.MapPath("Image") + "\\" + User.Identity.Name;
+		String relativePath = "Image\\" + User.Identity.Name + "\\" + fileName;
+		//Label1.Text = imagePath;
+		String imagePath = directoryPath + "\\" + fileName;
+		if (!System.IO.Directory.Exists(directoryPath))
+		{
+			System.IO.Directory.CreateDirectory(directoryPath);
+		}
+
+		FileUpload1.SaveAs(imagePath);
+		uploadLabel.Text = fileName + " upload complete.";
+		string ConStr = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+		SqlConnection myConn = new SqlConnection(ConStr);
+		myConn.Open();
+		string sqlstr = "INSERT INTO Images values('" + relativePath + "','" + fileName + "','" + img_tags.Text + "','" + User.Identity.Name + "')";
+		//System.Diagnostics.Debug.WriteLine(sqlstr);
+		SqlCommand testCommand = myConn.CreateCommand();
+		testCommand.CommandText = sqlstr;
+		try
+		{
+			testCommand.ExecuteNonQuery();
+			uploadLabel.Text = fileName + " upload complete.";
+		}
+		catch (Exception es)
+		{
+			uploadLabel.Text = fileName + " already exists.";
+		}
     }
 }
