@@ -19,9 +19,10 @@ public partial class WriteBlog : System.Web.UI.Page
         c_r = check();
         if (c_r == true)
         {
-
             String Blog_content = myInstance1.InnerText;
+			Blog_content = Blog_content.Replace("\"", "\\\"");
             String Blog_title = title_textbox.Text;
+			Blog_title = Blog_title.Replace("\"", "\\\"");
             String Blog_tags_tmp = tags_textbox.Text;
             String Blog_tags = null;
             String[] tmp2 =  Blog_tags_tmp.Split(';');
@@ -34,7 +35,7 @@ public partial class WriteBlog : System.Web.UI.Page
             String Blog_writer = "Shaobin";
             int flg = blog_acc.SelectedIndex;
             int Blog_acc =1;
-            int Id = 1111;
+			String Id = System.DateTime.Now.ToString();
             if (flg == 1)
             {
                 Blog_acc = 1;

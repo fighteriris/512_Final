@@ -16,7 +16,6 @@ public partial class webPersonal : System.Web.UI.Page
 		{
 			return null;
 		}
-		String[] result = new String[10];
 		String res = "";
 		string ConStr = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
 		SqlConnection myConn = new SqlConnection(ConStr);
@@ -32,7 +31,6 @@ public partial class webPersonal : System.Web.UI.Page
 		{
 			String pathStr = testRow["image_path"].ToString();
 			res += pathStr + ",";
-			System.Diagnostics.Debug.WriteLine("here: " + result[tmp]);
 			tmp++;
 		}
 		
@@ -46,33 +44,41 @@ public partial class webPersonal : System.Web.UI.Page
         return x;
     }
 
+	public String getBlogTitle() {
+		String res = "";
+		string ConStr = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+		SqlConnection myConn = new SqlConnection(ConStr);
+
+		myConn.Open();
+		String user = User.Identity.Name;
+		string sqlstr = "select * from [Blog] where [Blog_writer] ='" + user + "'";
+		SqlDataAdapter adapter = new SqlDataAdapter(sqlstr, myConn);
+		DataSet mydata = new DataSet();
+		adapter.Fill(mydata, "result_data");
+		myConn.Close();
+		int tmp = 0;
+
+		foreach (DataRow testRow in mydata.Tables["result_data"].Rows)
+		{
+			String blogID = testRow["Id"].ToString();
+			blogID = blogID.Replace("&", " ");
+			blogID = blogID.Replace("#", " ");
+			String blogTitle = testRow["Blog_title"].ToString();
+			blogTitle = blogTitle.Replace("&", " ");
+			blogTitle = blogTitle.Replace("#", " ");
+			String blogContent = testRow["Blog_content"].ToString();
+			blogContent = blogContent.Replace("&", " ");
+			blogContent = blogContent.Replace("#", " ");
+			res += blogID + "&" + blogTitle + "&" + blogContent + "#";
+			tmp++;
+		}       
+
+		return res;
+	}
+
     protected void Page_Load(object sender, EventArgs e)
     {
-
 		personal_info_col1.Text = User.Identity.Name;
-        string ConStr = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
-        SqlConnection myConn = new SqlConnection(ConStr);
-        
-        myConn.Open();
-        String user = "Shaobin";
-        string sqlstr = "select * from [Blog] where [Blog_writer] ='" + user + "'"; 
-        SqlDataAdapter adapter = new SqlDataAdapter(sqlstr, myConn);
-        DataSet mydata = new DataSet();
-        adapter.Fill(mydata, "result_data");
-        myConn.Close();
-        int tmp = 0;
-       
-        foreach (DataRow testRow in mydata.Tables["result_data"].Rows)
-        {
-           String _title = testRow["Blog_title"].ToString();
-           String _date = testRow["Blog_date"].ToString();
-           if (_title != null && _date != null)
-           {
-               tmp++;
-           }
-        }
-        
-          
         //SqlCommand testCommand = myConn.CreateCommand();
         //testCommand.CommandText = sqlstr;
         /*
@@ -136,7 +142,6 @@ public partial class webPersonal : System.Web.UI.Page
 		SqlConnection myConn = new SqlConnection(ConStr);
 		myConn.Open();
 		string sqlstr = "INSERT INTO Images values('" + relativePath + "','" + fileName + "','" + img_tags.Text + "','" + User.Identity.Name + "')";
-		//System.Diagnostics.Debug.WriteLine(sqlstr);
 		SqlCommand testCommand = myConn.CreateCommand();
 		testCommand.CommandText = sqlstr;
 		try

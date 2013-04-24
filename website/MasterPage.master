@@ -13,7 +13,7 @@
 	<script src="JQ/jquery-1.9.1js"></script>
 	<title>TripTracer</title>
 </head>
-<body>
+<body style="background-image:url(back.jpg);background-repeat:repeat;">
 	<form id="form1" runat="server">
 		<div class="Home_topbar" runat="server">
 			<div class="Home_topbar_else">

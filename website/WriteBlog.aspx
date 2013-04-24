@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 	<link rel="Stylesheet" type="text/css" href="CSS/Global.css" />
 	<link rel="Stylesheet" type="text/css" href="CSS/WriteBlog.css" />
-	<div class="content" runat="server" style="margin-bottom:3%; margin-top:5%">
+	<div class="content" runat="server" style="margin-bottom:6%; margin-top:10%">
 		<div id="Input_title">
 			<asp:Label Text="Title of the new blog : " runat="server" />
 			<asp:TextBox ID="title_textbox" runat="server" />
@@ -42,6 +42,8 @@
 			</div>
 			<div class="wb_buttonr" runat="server">
 				<asp:Button Text="Cancel" runat="server" OnClick="Unnamed5_Click" />
+			</div>
+			<div style="height:120px">
 			</div>
 		</div>
 	</div>

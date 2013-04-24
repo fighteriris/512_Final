@@ -1,7 +1,7 @@
 ﻿
 .Home_topbar
 {
-    background-color:#3300cc; z-index:999; position:fixed; top:0; left:0px; 
+    background-color:#3B5998; z-index:999; position:fixed; top:0; left:0px; 
     height:54px;
     width:100%;
     _position:absolute;
@@ -66,7 +66,7 @@
     margin-left:10%;
     margin-right:10%; 
     margin-bottom:10%;  
-    border-style:solid;
+    
 }
     .content input[type=submit]
     {
