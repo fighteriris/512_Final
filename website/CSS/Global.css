@@ -5,8 +5,8 @@
     height:54px;
     width:100%;
     _position:absolute;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
     _top: expression_r(documentElement.scrollTop + documentElement.clientHeight-this.offsetHeight); overflow:visible;
     bottom: 181px;
 }

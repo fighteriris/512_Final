@@ -4,8 +4,8 @@
 }
 
 .footer {
-	-webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
+	-webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
 	color: white;
 	font-size: 14px;
 	background-color: #3300cc;
