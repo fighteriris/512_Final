@@ -23,15 +23,19 @@
 			</div>
 		</div>
 
-		<div id="Home_top_blog" runat="server">
-			
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<asp:TextBox ID="Textbox1" runat="server" Width="285px" Height="40px" BorderColor="White" BorderStyle="Outset" />
-			
-			<asp:Button ID="disc_blog" runat="server" Text="Discover top blogs" OnClick="disc_blog_Click" Height="40px" Width="180px" BackColor="White" BorderStyle="Outset" />
+		<div id="Home_top_blog" runat="server" >
+            			
+						           
+            <asp:Button ID="disc_blog" runat="server" Text="Discover top blogs" OnClick="disc_blog_Click" Height="40px" Width="180px" BackColor="White" BorderStyle="Outset" />
 			
 			<asp:Button ID="disc_photo" runat="server" Text="Discover top photos" OnClick="disc_photo_Click" Height="40px" Width="180px" BackColor="White" BorderStyle="Outset" />
 			
 			<asp:Button ID="disc_dest" runat="server" Text="Discover top destinations " OnClick="disc_dest_Click" Height="40px" Width="280px" BackColor="White" BorderStyle="Outset"/>
+
+            <asp:TextBox ID="Textbox1" runat="server" Width="200px" Height="35px" BorderColor="White" BorderStyle="Outset" />
+            <asp:Button ID="Search" runat="server" Text="Search"/>
+	     
+            
 		</div>
 
 		<div id="Home_top_photo" runat="server">
