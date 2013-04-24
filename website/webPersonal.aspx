@@ -64,24 +64,18 @@
 			<div id="Div_image" class="personal_image_row" runat="server">
 				<asp:Label ID="image_label1" runat="server" />
 				<div class="pikachoose">
-	<ul id="pikame" class="jcarousel-skin-pika">
+	<ul id="pikame" class="jcarousel-skin-pika" onload="<%create();%>">
         <script>
-            alert("dddd");
-            var numof_img = 2;
-            var j = 1;
-            //for (i = 1; i < numof_img; i++) { //i表示你总共要放多少行图片 
-                //document.write("<li>")
-                //m = (3 * i) + 1 //表示每开头图片编号 
-                for (j = 1; j < 5; j++) { //j表示你每行放多少图片 
-                    //n = m + j //加j用来设置该行起始图片编号 
-                    alert("aaaa");
+            
+            var numof_img = "<%=getnum()%>";
+            alert("ddd=<%=getnum()%>");
+            var j = 1;         
+                for (j = 1; j < 5; j++) {                  
+                    
                     document.write("<li><img src=\"../../"+j+".jpg\" />")
-                    //document.write(n)
-                    //document.write(".gif width=图片宽度 height=图片高度>")//这三行是用来调用图片 
-                    //document.write("</td>")
                     document.write("</li>")
-                }           
-</script> 
+                }
+         </script> 
       
 		</ul>
 </div>

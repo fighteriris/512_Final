@@ -6,11 +6,20 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
 public partial class webPersonal : System.Web.UI.Page
 {
-    
+
+    public void create() {
+        System.Diagnostics.Debug.WriteLine("dddd");
+    }
+    public string getnum() {
+        string x = "6";
+        return x;
+    }
+
     protected void Page_Load(object sender, EventArgs e)
     {
 
@@ -36,8 +45,7 @@ public partial class webPersonal : System.Web.UI.Page
                tmp++;
            }
         }
-       
-       
+        
           
         //SqlCommand testCommand = myConn.CreateCommand();
         //testCommand.CommandText = sqlstr;
