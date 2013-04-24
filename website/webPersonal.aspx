@@ -87,7 +87,11 @@
 					document.write("<div class=\"personal_blog_row\">");
 					document.write("<a href=\"\" onclick=\"window.open('single_blog.aspx?id=" + contents[0] + "');\">" + contents[1] + "</a>");
 					document.write("<br/>");
-					document.write("<span>&nbsp&nbsp&nbsp&nbsp" + contents[2].substr(0, 20	0) + "&nbsp ... ...");
+					if (contents[2].lastIndexOf("<img") > 0) {
+						contents[2] = contents[2].substr(0, contents[2].lastIndexOf("<img"));
+					}
+					contents[2] = contents[2].replace(/<[^>]+>/g, "");
+					document.write("<span>&nbsp&nbsp&nbsp&nbsp" + contents[2].substr(0, 200) + "&nbsp ... ...");
 					document.write("</span>");
 					document.write("<br/>");
 					document.write("</div>");

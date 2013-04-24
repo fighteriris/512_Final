@@ -48,6 +48,14 @@ public partial class WriteBlog : System.Web.UI.Page
             SqlConnection myConn = new SqlConnection(ConStr);
             // Output_change.Text = "Loading...";
             myConn.Open();
+			if (Blog_writer.Length == 0)
+			{
+				return;
+			}
+			if (Blog_title.Length == 0)
+			{
+				return;
+			}
             string sqlstr = "INSERT INTO Blog values('" + Id+ "','" + Blog_writer+ "','" + Blog_date+ "','" + Blog_title+ "','" + Blog_content+ "','" + Blog_tags+ "','" + Blog_acc +"')";
             SqlCommand testCommand = myConn.CreateCommand();
             testCommand.CommandText = sqlstr;
