@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="HomeCopy.aspx.cs" Inherits="HomeCopy" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-	<div id="Div1" class="Home_content" runat="server" style="background-image:url('homegif.gif'); height:650px;left:0px;right:0px;">
+	<div id="Div1" class="Home_content" runat="server" style="background-image:url('homegif2.gif'); height:650px;left:0px;right:0px;">
 		<%-- Content --%>
                 <br />
                 <br />
