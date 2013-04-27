@@ -11,7 +11,7 @@ public partial class WriteBlog : System.Web.UI.Page
 {
 	protected void Page_Load(object sender, EventArgs e)
 	{
-
+		
 	}
 	protected void Unnamed6_Click(object sender, EventArgs e)
 	{
@@ -20,6 +20,7 @@ public partial class WriteBlog : System.Web.UI.Page
 		if (c_r == true)
 		{
 			String Blog_content = myInstance1.InnerText;
+			System.Diagnostics.Debug.WriteLine("here " + Blog_content);
 			Blog_content = Blog_content.Replace("\"", "\\\"");
 			String Blog_title = title_textbox.Text;
 			Blog_title = Blog_title.Replace("\"", "\\\"");
@@ -47,12 +48,14 @@ public partial class WriteBlog : System.Web.UI.Page
 			SqlConnection myConn = new SqlConnection(ConStr);
 			// Output_change.Text = "Loading...";
 			myConn.Open();
-			if (Blog_writer.Length == 0)
-			{
-				return;
-			}
 			if (Blog_title.Length == 0)
 			{
+				Response.Write("<script>alert(\"The title can not be empty!\");</script>");
+				return;
+			}
+			if (Blog_writer.Length == 0)
+			{
+				Response.Write("<script>alert(\"You need to login first\");</script>");
 				return;
 			}
 			string sqlstr = "INSERT INTO Blog values('" + Id + "','" + Blog_writer + "','" + Blog_date + "','" + Blog_title + "','" + Blog_content + "','" + Blog_tags + "','" + Blog_acc + "')";
@@ -61,7 +64,6 @@ public partial class WriteBlog : System.Web.UI.Page
 			try
 			{
 				testCommand.ExecuteNonQuery();
-
 			}
 			catch (Exception es)
 			{

@@ -12,16 +12,9 @@
 			thenew.innerHTML = "<h1>" + blogs[0] + "</h1><br/>" + "<h2>" + blogs[2] + "&nbsp" + blogs[3] + "</h2><br/><span>" + blogs[1] + "</span>";
 
 			document.getElementById('single_blog').appendChild(thenew);
-			//document.write("<div class=\"single_content\">");
-			//document.
-			//document.write("<a href=\"\" onclick=\"window.open('single_blog.aspx?id=" + contents[0] + "');\">" + contents[1] + "</a>");
-			//document.write("<br/>");
-			//document.write("<span>");
-			//document.write("</span>");
-			//document.write("<br/>");
-			//document.write("</div>");
 
 		</script>
-		<asp:Button ID="single_blog_comment" runat="server" float="right" Text="Like it" />
+		<asp:Button ID="likeButton" runat="server" float="right" Text="Like it" />
+		<asp:Button ID="deleteButton" runat="server" float="right" Text="Delete" OnClick="deleteButton_Click" OnClientClick="return confirm('Are you sure to delete this blog? This operation cannot be undoed!');" />
 	</div>
 </asp:Content>

@@ -38,7 +38,7 @@
 
 			</div>
 			<div class="wb_buttonl" runat="server">
-				<asp:Button Text="Submit" runat="server" OnClick="Unnamed6_Click" />
+				<asp:Button  ID="submitButton" Text="Submit" runat="server" OnClick="Unnamed6_Click" />
 			</div>
 			<div class="wb_buttonr" runat="server">
 				<asp:Button Text="Cancel" runat="server" OnClick="Unnamed5_Click" />

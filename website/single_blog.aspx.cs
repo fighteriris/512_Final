@@ -59,4 +59,23 @@ public partial class single_blog : System.Web.UI.Page
 		return res;
 	}
 
+	protected void deleteButton_Click(object sender, EventArgs e)
+	{
+		String blogID = Request.QueryString["id"];
+		string ConStr = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+		SqlConnection myConn = new SqlConnection(ConStr);
+		myConn.Open();
+		string sqlstr = "DELETE FROM Blog WHERE Id = '" + blogID + "'";
+		SqlCommand testCommand = myConn.CreateCommand();
+		testCommand.CommandText = sqlstr;
+		try
+		{
+			testCommand.ExecuteNonQuery();
+		}
+		catch (Exception es)
+		{
+			System.Diagnostics.Debug.WriteLine("Delete Blog Error.");
+		}
+		Response.Redirect("webPersonal.aspx", true);
+	}
 }

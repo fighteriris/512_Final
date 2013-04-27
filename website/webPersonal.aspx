@@ -85,7 +85,7 @@
 					var contents = new Array();
 					contents = blogs[j].split("&");
 					document.write("<div class=\"personal_blog_row\">");
-					document.write("<a href=\"\" onclick=\"window.open('single_blog.aspx?id=" + contents[0] + "');\">" + contents[1] + "</a>");
+					document.write("<a href='single_blog.aspx?id=" + contents[0] + "');\">" + contents[1] + "</a>");
 					document.write("<br/>");
 					if (contents[2].lastIndexOf("<img") > 0) {
 						contents[2] = contents[2].substr(0, contents[2].lastIndexOf("<img"));
