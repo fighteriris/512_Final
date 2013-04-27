@@ -73,7 +73,10 @@ public partial class webPersonal : System.Web.UI.Page
 			String blogContent = testRow["Blog_content"].ToString();
 			blogContent = blogContent.Replace("&", " ");
 			blogContent = blogContent.Replace("#", " ");
-			res += blogID + "&" + blogTitle + "&" + blogContent + "#";
+			String blogDate = testRow["Blog_date"].ToString();
+			blogDate = blogDate.Replace("&", " ");
+			blogDate = blogDate.Replace("#", " ");
+			res += blogID + "&" + blogTitle + "&" + blogContent + "&" + blogDate + "#";
 			tmp++;
 		}
 

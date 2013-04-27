@@ -66,11 +66,15 @@
 .personal_blog_row {
 	padding-bottom: 10px;
 	padding-top: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-top: 5px;
 	margin-left: 15%;
 	margin-right: 35%;
 	width: 65%;
-	height: 110px;
+	height: auto;
 	border-bottom-style: groove;
+	background-color: white;
 }
 
 	.personal_blog_row span {
@@ -104,15 +108,16 @@
 
 .personal_blog span {
 	width: 100%;
-	font-family: Arial;
+	font-family: MS PMincho;
 	font-size: 20px;
 }
 
 .personal_blog a {
-	font-size: 30px;
-	font: bold;
-	font-family: Arial;
+	font-size: 25px;
+	font-weight: 900;
+	font-family: Segoe Script;
 	color: black;
+	text-decoration: none;
 }
 
 .personal_blog_row_b {
