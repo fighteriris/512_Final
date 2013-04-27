@@ -23,13 +23,27 @@ public partial class single_blog : System.Web.UI.Page
 		adapter.Fill(mydata, "result");
 		myConn.Close();
 
+		int blogCount = 0;
 		foreach (DataRow testRow in mydata.Tables["result"].Rows)
 		{
-			String blogTitle = testRow["Blog_title"].ToString();
-			String blogContent = testRow["Blog_content"].ToString();
-			//title.Text = blogTitle + "\n" + blogContent;
+			blogCount = (int)testRow["Blog_clickcount"];
 			break;
 		}
+		blogCount++;
+		myConn.Open();
+		clickCountLabel.Text = "Click-through Rate: " + Convert.ToString(blogCount);
+		sqlstr = "UPDATE Blog SET Blog_clickcount = '" + Convert.ToString(blogCount) + "' WHERE Id = '" + blogID + "'";
+		SqlCommand testCommand = myConn.CreateCommand();
+		testCommand.CommandText = sqlstr;
+		try
+		{
+			testCommand.ExecuteNonQuery();
+		}
+		catch
+		{
+			System.Diagnostics.Debug.WriteLine("update SQL error!");
+		}
+		myConn.Close();
 	}
 
 	public String getContent()
@@ -76,6 +90,7 @@ public partial class single_blog : System.Web.UI.Page
 		{
 			System.Diagnostics.Debug.WriteLine("Delete Blog Error.");
 		}
+		myConn.Close();
 		Response.Redirect("webPersonal.aspx", true);
 	}
 }
