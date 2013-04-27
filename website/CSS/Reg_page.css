@@ -1,16 +1,14 @@
-﻿#Re_Content
-{
-    width:auto;
-    height:507px;
+﻿#Re_Content {
+	width: auto;
+	height: 507px;
 }
 
 .login_page {
-	width: 349px; 
+	width: 349px;
 	margin-right: 10%;
-	margin-left: 10%; 
+	margin-left: 10%;
 	height: 277px;
 }
-
 
 body {
 }

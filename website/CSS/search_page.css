@@ -1,63 +1,62 @@
 ﻿
-#Search_topbar
-{
-    background-color:#276195; z-index:999; position:fixed; top:0; left:0px; 
-    height:54px;
-    width:1200px;
-    _position:absolute;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    _top: expression_r(documentElement.scrollTop + documentElement.clientHeight-this.offsetHeight); 
-    overflow:visible;
-    bottom: 252px;
-}
-#Search_topbar_else
-{
-    width:700px;
-    height:50px;
-    float:left;
+#Search_topbar {
+	background-color: #276195;
+	z-index: 999;
+	position: fixed;
+	top: 0;
+	left: 0px;
+	height: 54px;
+	width: 1200px;
+	_position: absolute;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	_top: expression_r(documentElement.scrollTop + documentElement.clientHeight-this.offsetHeight);
+	overflow: visible;
+	bottom: 252px;
 }
 
-#Search_logo 
-{
-    width:150px;
-    
+#Search_topbar_else {
+	width: 700px;
+	height: 50px;
+	float: left;
 }
 
-#Search_login 
-{
-    float:right;
-    border:solid;
+#Search_logo {
+	width: 150px;
 }
 
-#Search_content
-{
-    border-style: solid;
-    border-color: inherit;
-    border-width: medium;
-left:-9px;
-    margin-top:50px;
-    width:1200px;
-    height:1000px; 
-    position:absolute;  
-    top: 26px;
+#Search_login {
+	float: right;
+	border: solid;
+}
+
+#Search_content {
+	border-style: solid;
+	border-color: inherit;
+	border-width: medium;
+	left: -9px;
+	margin-top: 50px;
+	width: 1200px;
+	height: 1000px;
+	position: absolute;
+	top: 26px;
 }
 
 
-#Search_img
-{    border:solid;
-    width:100%;
-    height:400px;
-}
-#Search_top_photo
-{    border:solid;
-    width:100%;
-    height:300px;
+#Search_img {
+	border: solid;
+	width: 100%;
+	height: 400px;
 }
 
-#Search_top_blog
-{
-    border:solid;
-    width:100%;
-    height:300px;
+#Search_top_photo {
+	border: solid;
+	width: 100%;
+	height: 300px;
+}
+
+#Search_top_blog {
+	border: solid;
+	width: 100%;
+	height: 300px;
 }

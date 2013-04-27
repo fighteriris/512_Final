@@ -5,7 +5,7 @@
 
 .footer {
 	-webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
+	-moz-border-radius: 0px;
 	color: white;
 	font-size: 14px;
 	background-color: #3B5998;
@@ -18,19 +18,19 @@
 	width: 100%;
 }
 
-.footer a:link, .footer a:visited {
-    color:white;
-    text-decoration:none;
-    font-size:12px;
-    line-height:20px;
-}
+	.footer a:link, .footer a:visited {
+		color: white;
+		text-decoration: none;
+		font-size: 12px;
+		line-height: 20px;
+	}
 
-.footer a:hover {
-    color:#276195;
-}
+	.footer a:hover {
+		color: #276195;
+	}
 
 .foot {
-    text-align:center;
-    width:300px;
-    margin:0 auto;
+	text-align: center;
+	width: 300px;
+	margin: 0 auto;
 }

@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="CSS/normalize.css" />
 	<link rel="stylesheet" href="CSS/style.css" />
 	<%-- Personal_form --%>
-	<div class="content" runat="server" style="height:150px">
+	<div class="content" runat="server" style="height: 150px">
 		<div id="personal_info" runat="server">
 			<div class="personal_info_col">
 				<asp:Label ID="personal_info_col1" runat="server" />
@@ -32,7 +32,7 @@
 			</div>
 		</div>
 
-		<div id="personal_upload"  class="personal_upload" style="display:none;" runat="server">
+		<div id="personal_upload" class="personal_upload" style="display: none;" runat="server">
 			<asp:TextBox ID="img_tags" runat="server" />
 			<asp:Label ID="Label1" Text="Tags" runat="server" />
 			<asp:FileUpload ID="FileUpload1" runat="server" />
@@ -58,8 +58,8 @@
 
 			<div id="Div_image" class="personal_image_row" runat="server">
 				<asp:Label ID="image_label1" runat="server" />
-				
-				<div class="pikachoose" >
+
+				<div class="pikachoose">
 					<ul id="pikame" class="jcarousel-skin-pika" onload="<%create();%>">
 						<script>
 							var _imgs = "<%=getPath()%>";
@@ -74,7 +74,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<div id="personal_blog" class="personal_blog" runat="server">
 			<script>
 				var _blogs = "<%=getBlogTitle()%>";
@@ -98,7 +98,6 @@
 				}
 			</script>
 			<div id="Div7" class="personal_blog_row_b" runat="server">
-				
 			</div>
 		</div>
 	</div>

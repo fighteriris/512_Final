@@ -13,7 +13,7 @@
 	<script src="JQ/jquery-1.9.1js"></script>
 	<title>TripTracer</title>
 </head>
-<body style="background-image:url(back.jpg);background-repeat:repeat;">
+<body style="background-image: url(back.jpg); background-repeat: repeat;">
 	<form id="form1" runat="server">
 		<div class="Home_topbar" runat="server">
 			<div class="Home_topbar_else">
@@ -28,7 +28,7 @@
 							<section id="login">
 								<asp:LoginView ID="LoginView1" runat="server" ViewStateMode="Disabled">
 									<AnonymousTemplate>
-										<ul style="font-size:16px">
+										<ul style="font-size: 16px">
 											<li><a id="registerLink" runat="server" href="~/Regist.aspx" style="color: white">Register</a></li>
 											<li><a id="loginLink" runat="server" href="~/Login.aspx" style="color: white">Log in</a></li>
 										</ul>
@@ -51,14 +51,14 @@
 		<asp:ContentPlaceHolder ID="MainContent" runat="server">
 		</asp:ContentPlaceHolder>
 		<div class="footer">
-            <div class="foot">
-                <a href="HomeCopy.aspx" target="_blank">About</a>&nbsp;|&nbsp;<a href="https://github.com/fighteriris/512_Final">Contact</a>
-                <br />
-                <div style="font-size: 10px">
-                    &copy; 2013 Trip Tracer
-                </div>
-            </div>
-        </div>
+			<div class="foot">
+				<a href="HomeCopy.aspx" target="_blank">About</a>&nbsp;|&nbsp;<a href="https://github.com/fighteriris/512_Final">Contact</a>
+				<br />
+				<div style="font-size: 10px">
+					&copy; 2013 Trip Tracer
+				</div>
+			</div>
+		</div>
 	</form>
 </body>
 </html>

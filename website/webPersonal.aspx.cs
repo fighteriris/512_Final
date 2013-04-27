@@ -11,7 +11,8 @@ using System.Web.UI.WebControls;
 
 public partial class webPersonal : System.Web.UI.Page
 {
-	public String getPath() {
+	public String getPath()
+	{
 		if (User.Identity.Name.Length == 0)
 		{
 			return null;
@@ -33,18 +34,21 @@ public partial class webPersonal : System.Web.UI.Page
 			res += pathStr + ",";
 			tmp++;
 		}
-		
+
 		return res;
 	}
-    public void create() {
-        System.Diagnostics.Debug.WriteLine("dddd");
-    }
-    public string getnum() {
-        string x = "6";
-        return x;
-    }
+	public void create()
+	{
+		System.Diagnostics.Debug.WriteLine("dddd");
+	}
+	public string getnum()
+	{
+		string x = "6";
+		return x;
+	}
 
-	public String getBlogTitle() {
+	public String getBlogTitle()
+	{
 		String res = "";
 		string ConStr = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
 		SqlConnection myConn = new SqlConnection(ConStr);
@@ -71,34 +75,34 @@ public partial class webPersonal : System.Web.UI.Page
 			blogContent = blogContent.Replace("#", " ");
 			res += blogID + "&" + blogTitle + "&" + blogContent + "#";
 			tmp++;
-		}       
+		}
 
 		return res;
 	}
 
-    protected void Page_Load(object sender, EventArgs e)
-    {
+	protected void Page_Load(object sender, EventArgs e)
+	{
 		personal_info_col1.Text = User.Identity.Name;
-        //SqlCommand testCommand = myConn.CreateCommand();
-        //testCommand.CommandText = sqlstr;
-        /*
-        try
-        {
-            testCommand.ExecuteNonQuery();
-            Upload_re.Text = "Upload Sucess";
-        }
-        catch (Exception es)
-        {
-            Upload_re.Text = "Upload failed";
-        }
-         */
-    }
-    protected void submit_blog_Click(object sender, EventArgs e)
-    {
-        
-    }
-    protected void img_upload_Click(object sender, EventArgs e)
-    {
+		//SqlCommand testCommand = myConn.CreateCommand();
+		//testCommand.CommandText = sqlstr;
+		/*
+		try
+		{
+			testCommand.ExecuteNonQuery();
+			Upload_re.Text = "Upload Sucess";
+		}
+		catch (Exception es)
+		{
+			Upload_re.Text = "Upload failed";
+		}
+		 */
+	}
+	protected void submit_blog_Click(object sender, EventArgs e)
+	{
+
+	}
+	protected void img_upload_Click(object sender, EventArgs e)
+	{
 		uploadLabel.Text = "";
 		if (User.Identity.Name.Length == 0)
 		{
@@ -153,5 +157,5 @@ public partial class webPersonal : System.Web.UI.Page
 		{
 			uploadLabel.Text = fileName + " already exists.";
 		}
-    }
+	}
 }

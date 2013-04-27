@@ -7,8 +7,8 @@ using System.Web.UI.WebControls;
 
 public partial class Regist : System.Web.UI.Page
 {
-    protected void Page_Load(object sender, EventArgs e)
-    {
+	protected void Page_Load(object sender, EventArgs e)
+	{
 		System.Diagnostics.Debug.WriteLine("UserName: " + User.Identity.Name);
-    }
+	}
 }

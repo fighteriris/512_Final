@@ -11,8 +11,8 @@ using System.Data.SqlClient;
 public partial class single_blog : System.Web.UI.Page
 {
 	public string a;
-    protected void Page_Load(object sender, EventArgs e)
-    {
+	protected void Page_Load(object sender, EventArgs e)
+	{
 		String blogID = Request.QueryString["id"];
 		string ConStr = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
 		SqlConnection myConn = new SqlConnection(ConStr);
@@ -30,11 +30,11 @@ public partial class single_blog : System.Web.UI.Page
 			//title.Text = blogTitle + "\n" + blogContent;
 			break;
 		}
-    }
+	}
 
 	public String getContent()
 	{
-		string res="";
+		string res = "";
 		String blogID = Request.QueryString["id"];
 		string ConStr = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
 		SqlConnection myConn = new SqlConnection(ConStr);
@@ -53,7 +53,7 @@ public partial class single_blog : System.Web.UI.Page
 			String blogDate = testRow["Blog_date"].ToString();
 			//title.Text = blogTitle + "\n" + blogContent;
 			//break;
-			res = blogTitle + "^" + blogContent + "^" + blogWriter + "^" + blogDate;			
+			res = blogTitle + "^" + blogContent + "^" + blogWriter + "^" + blogDate;
 		}
 		System.Diagnostics.Debug.WriteLine("res " + res);
 		return res;

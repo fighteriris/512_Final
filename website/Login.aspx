@@ -1,9 +1,9 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="Login" MasterPageFile="~/MasterPage.master" %>
-    
+
 <asp:Content ContentPlaceHolderID="MainContent" runat="server">
-	<section class="loginform cf" style="margin-right: 20%; margin-left: 37%; margin-top: 2%; margin-top: 70px; margin-bottom:5%; height: 320px; width: 312px">
+	<section class="loginform cf" style="margin-right: 20%; margin-left: 37%; margin-top: 2%; margin-top: 70px; margin-bottom: 5%; height: 320px; width: 312px">
 		<link href="CSS/Reg_page.css" rel="stylesheet" />
-		<div id="login_page" style="margin-left:10%">
+		<div id="login_page" style="margin-left: 10%">
 			<div id="regist_header">
 				<h1>Welcome to Travel Tracer! </h1>
 				<br />
@@ -45,7 +45,7 @@
 												</td>
 											</tr>
 											<tr>
-												<td align="center" colspan="2" style="color:red; width: 100px">
+												<td align="center" colspan="2" style="color: red; width: 100px">
 													<asp:Literal ID="FailureText" runat="server" EnableViewState="False"></asp:Literal>
 												</td>
 											</tr>
