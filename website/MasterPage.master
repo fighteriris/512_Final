@@ -10,7 +10,7 @@
 	<link href="CSS/footer.css" rel="stylesheet" />
 	<script src="JQ/resize.js"></script>
 	<script src="JQ/sliding.js"></script>
-	<script src="JQ/jquery-1.9.1js"></script>
+	<script src="JQ/jquery-1.9.1.js"></script>
 	<title>TripTracer</title>
 </head>
 <body style="background-image: url(back.jpg); background-repeat: repeat;">

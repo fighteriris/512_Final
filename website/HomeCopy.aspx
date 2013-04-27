@@ -135,7 +135,26 @@
 				<a class="button_l" href="#" onclick="window.open">
 					<br />
 					click me </a>
-				<asp:TextBox ID="Textbox1" CssClass="search_text_box" runat="server" /><a class="button_r" href="#"></a>
+				
+               <table border="0" cellpadding="0" cellspacing="0" class="tab_search">
+	<tr>
+		<td>
+			<input type="text" name="q" title="Search" class="searchinput" id="searchinput" onkeydown="if (event.keyCode==13) {}" onblur="if(this.value=='')value='- Search Products -';" onfocus="if(this.value=='- Search Products -')value='';" value="- Search Products -" size="10"/>
+		</td>
+		<td>
+            	<script>
+
+            	    function openmy() {
+            	        var q = document.getElementById('searchinput').value;
+            	        //alert(q);
+            	        window.open('search_result.aspx?search=' + q + '');
+            	    }
+            </script>
+			<input type="image" width="21" height="17" class="searchaction"  onclick="openmy();" alt="Search" src="http://www.codefans.net/jscss/demoimg/201008/magglass.gif" border="0" hspace="2"/>
+        
+        </td>
+	</tr>
+</table>
 
 			</div>
 		</div>

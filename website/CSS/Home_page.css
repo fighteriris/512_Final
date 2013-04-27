@@ -147,6 +147,7 @@ body {
 	background-color: rgba(0,0,0,0.6);
 	padding-top: 30px;
 	width: 100%;
+     box-shadow: 10px 10px 25px rgba(0,0,0,.8);
 }
 
 a:hover {
@@ -232,7 +233,7 @@ a {
 	text-shadow: 0 1px 1px rgba(0,0,0,.3);
 	-webkit-border-radius: .5em;
 	-moz-border-radius: .5em;
-	border-radius: 0 .5em .5em 0;
+	border-radius: 0 0 0 0;
 	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
 	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
 	box-shadow: 0 1px 2px rgba(0,0,0,.2);
@@ -262,9 +263,6 @@ a {
 	text-decoration: none;
 	font: 14px/100% Arial, Helvetica, sans-serif;
 	text-shadow: 0 1px 1px rgba(0,0,0,.3);
-	-webkit-border-radius: .5em;
-	-moz-border-radius: .5em;
-	border-radius: 0 .5em .5em 0;
 	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
 	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
 	box-shadow: 0 1px 2px rgba(0,0,0,.2);
@@ -273,6 +271,7 @@ a {
 	height: 40px;
 	bottom: 0px;
 	float: left;
+    margin-right:5px;
 }
 
 	.button_r:hover {
@@ -327,4 +326,38 @@ a {
 			color: #999;
 			font-weight: normal;
 			font-style: italic;
-		}E
+		}
+
+
+
+.searchinput{
+	border-right-width: 0px;
+	padding-left: 3px;
+	width: 168px;
+	font-family: arial;
+	float: left;
+	border-top-width: 0px;
+	border-bottom-width: 0px;
+	color: #636365;
+	margin-left: 4px;
+	font-size: 8pt;
+	vertical-align: middle;
+	border-left-width: 0px;
+	margin-right: 3px;
+    height:40px;
+    margin-left:10px;
+}
+.tab_search{
+    margin-left:10px;
+	border-bottom: #cccccc 1px solid;
+	border-left: #cccccc 1px solid;
+	height:40px;
+	border-top: #cccccc 1px solid;
+	border-right: #cccccc 1px solid;
+
+}
+.searchaction{
+	width: 21px;
+	float: left;
+	height: 17px;
+}
