@@ -6,7 +6,7 @@ Shaobin Ding; Ying Wang; Congrui Xu; Tong Liu
 
 Trip Tracer
 --------------
-hehe
+
 
 Functions
 ----------
@@ -27,8 +27,3 @@ Database
 --------
 
 
-See here
---------
-http://tomcat.bu.edu/ec512/SampleProposals/Sample1.pdf
-http://tomcat.bu.edu/ec512/SampleProposals/Sample2.pdf
-http://tomcat.bu.edu/ec512/SampleProposals/Sample3.pdf
