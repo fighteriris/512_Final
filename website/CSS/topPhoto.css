@@ -1,0 +1,39 @@
+﻿.topPhoto_row
+{
+    background-color:white;
+    width:45%;
+    margin-left:10px;
+    height:auto;
+    float:left;
+    padding-bottom:30px;
+ -webkit-border-radius: .5em;
+	-moz-border-radius: .5em;
+	border-radius: .5em .5em .5em .5em;
+    border-bottom-style:groove;
+    margin-bottom:20px;
+}
+    .topPhoto_row a
+    {
+        width:100%;
+        height:auto;
+    }
+    .topPhoto_row span
+    {
+        font-family:Segoe Script;
+        font-size:large;
+    }
+
+.topPhoto_row_l
+{
+     margin-left:10px;
+    width:100%;
+    height:40px;
+    float:left;
+}
+.topPhoto_row_image
+{
+    border-bottom-style:groove;
+    border-radius: .5em .5em 0 0;
+    width:100%;
+    height:auto;
+}

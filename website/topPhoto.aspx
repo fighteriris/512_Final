@@ -2,39 +2,45 @@
 
 
 <asp:Content ContentPlaceHolderID="MainContent" runat="server">
-	<div id="top_photo_header">
-		<h1 style="font-style: italic; color: blue; font-weight: 200;">Discover the World</h1>
-		<%-- header background goes here --%>
-	</div>
+    <link href="CSS/topPhoto.css" rel="stylesheet" />
 
-	<div id="topPhoto_content" style="width: 1200px; height: 500px">
+    <div class="content" style="padding-top: 20px; height: 100%; padding-bottom: 30px;">
+        <script>
+            a();
+            a();
+            function a() {
+                var _images = "<%=getImageInfo()%>";
+                var images = new Array();
+                images = _images.split("#");
 
-		<div id="top_photo_col_1" style="border: solid; width: 290px; height: 500px; float: left;">
-			<div id="c1_1" style="border: groove">
-				<img id="img_c1_1" onload="resize_1('img_c1_1')" src="Home_BG/BG1.png" />
-				<p style="float: right">-by xxxxxx</p>
-			</div>
-			<div id="c1_2" style="border: groove">
-				<img id="img_c1_2" onload="resize_1('img_c1_2')" src="Home_BG/BG2.png" />
-				<p style="float: right">-by Ying Wang</p>
-			</div>
-		</div>
+                for (j = 0; j < images.length - 1; j++) {
+                    var contents = new Array();
+                    contents = images[j].split("&");
+                    document.write("<div class=\"topPhoto_row\">");
+                    document.writeln("<a href=\"single_photo.aspx?path=" + contents[0] + "\"><img class=\"topPhoto_row_image\" src=\"" + contents[0] + "\" class=\"delete_pic_i\"/></a>");
+                    document.write("<br/>");
+                    document.write("<span style=\"font-size: 10px;\">" + contents[1] + "</span>");
+                    document.write("<br/>");
+                    document.write("<span style=\"font-size: 10px;\">" + contents[2] + "</span>");
+                    document.write("<br/>");
+                    document.write("</div>");
+                }
 
-		<div id="top_photo_col_2" style="border: solid; width: 600px; height: 500px; float: left;">
-			<div id="c2_1" style="border: groove">
-				<img id="img_c2_1" onload="resize_2('img_c2_1')" src="Home_BG/BG3.png" />
-				<p style="float: right">-by DSB</p>
-				<asp:Button ID="like" runat="server" Text="Like it" Style="border-style: none; width: 124px; height: 35px; background-repeat: no-repeat; margin-left: 40%;" />
-			</div>
 
-		</div>
-		<div id="top_photo_col_3" style="border: solid; width: 290px; height: 500px; float: left;">
-		</div>
+            }
 
-	</div>
-	<br />
-	<br />
-	<br />
-	<br />
-	<hr />
+            document.write("<div class=\"topPhoto_row_l\">");
+            document.write(" <a href=\"\" CssClass=\"Searchmore_more\" onclick=\"search_more()\" />dfdfdfddf</a>");
+            document.write("</div>");
+
+            function search_more() {
+                var ddd = "<%=num()%>";
+            }
+         
+
+        </script>
+
+    </div>
+
+
 </asp:Content>

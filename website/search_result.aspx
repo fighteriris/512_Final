@@ -3,20 +3,19 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 	<link href="CSS/search_result.css" rel="stylesheet" />
 
-	<div id="Search_result" class="content" style="width: 85%; margin: 0 auto; height: 1200px; background: #ffffff">
+	<div id="Search_result" class="content" style="width: 85%; margin: 0 auto; height: 1200px;">
 
 		<div id="Search_blog_photo" style="width: 100%; height: 300px;">
 			<img id="imgback" src="Search_Blog.jpg" style="width: 100%; height: 300px; margin: 0 auto;" />
 		</div>
 
 		<br />
-		<div id="sub_title" style="height: 58px">
-			<div style="margin-left: 20%; margin-right: 20%; border-style: solid; padding-left: 18%;">
-
+		<div id="sub_title" style="height: 50px;border-bottom-style:groove;">
+			<div class="searchinput" >
 				<table border="0" cellpadding="0" cellspacing="0" class="tab_search">
 					<tr>
-						<td>
-							<asp:TextBox CssClass="searchinput_n" ID="searchinput" runat="server" />
+						<td style="height:40px;">
+							<asp:TextBox CssClass="searchinput_n"  ID="searchinput" runat="server" />
 						</td>
 						<td style="width: 61px">
 							<asp:ImageButton ID="imageButton" src="http://www.codefans.net/jscss/demoimg/201008/magglass.gif" runat="server"/>
@@ -27,8 +26,8 @@
 			</div>
 		</div>
 
-		<div id="search_blog_result" style="height: 590px; width: 49%; float: left; border: dotted">
-			<h3 style="text-align: center">Here is the relevant blogs</h3>
+		<div id="search_blog_result" class="search_result_l">
+			
 			<script>
 				var _blogs = "<%=getBlogInfo()%>";
 				var blogs = new Array();
@@ -37,7 +36,7 @@
 				for (j = 0; j < blogs.length - 1; j++) {
 					var contents = new Array();
 					contents = blogs[j].split("&");
-					document.write("<div class=\"personal_blog_row\">");
+					document.write("<div class=\"search_result_l_row\">");
 					document.write("<a href='single_blog.aspx?id=" + contents[0] + "');\">" + contents[1] + "</a>");
 					document.write("<br/>");
 					if (contents[2].lastIndexOf("<img") > 0) {
@@ -56,8 +55,8 @@
 
 		</div>
 
-		<div id="search_photo_result" style="height: 590px; width: 49%; float: right; border: dotted">
-			<h3 style="text-align: center">Here is the relevant photos</h3>
+		<div id="search_photo_result" class="search_result_r" >
+			
 			<script>
 				var _images = "<%=getImageInfo()%>";
 				var images = new Array();
@@ -66,8 +65,9 @@
 				for (j = 0; j < images.length - 1; j++) {
 					var contents = new Array();
 					contents = images[j].split("&");
-					document.write("<div>");
-					document.writeln("<a href=\"single_photo.aspx?path=" + contents[0] + "\"><img src=\"" + contents[0] + "\" class=\"delete_pic_i\"/></a>");
+					document.write("<div class=\"search_result_r_row\">");
+					document.writeln("<a href=\"single_photo.aspx?path=" + contents[0] + "\"><img class=\"search_result_r_row_image\" src=\"" + contents[0] + "\" class=\"delete_pic_i\"/></a>");
+					document.write("<br/>");
 					document.write("<span style=\"font-size: 10px;\">" + contents[1] + "</span>");
 					document.write("<br/>");
 					document.write("<span style=\"font-size: 10px;\">" + contents[2] + "</span>");
