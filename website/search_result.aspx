@@ -19,16 +19,8 @@
 			<input type="text" name="q" title="Search" class="searchinput_n" id="searchinput" onkeydown="if (event.keyCode==13) {}" onblur="if(this.value=='')value='- Search Products -';" onfocus="if(this.value=='- Search Products -')value='';" value="- Search Products -" size="10"/>
 		</td>
 		<td style="width: 61px">
-            	<script>
-
-            	    function openmy() {
-            	        var q = document.getElementById('searchinput').value;
-            	        //alert(q);
-            	        window.open('search_result.aspx?search=' + q + '');
-            	    }
-            </script>
-			<input type="image" width="25" height="25" class="searchaction_n"  onclick="openmy();" alt="Search" src="http://www.codefans.net/jscss/demoimg/201008/magglass.gif" border="0" hspace="2"/>
-        
+            <asp:ImageButton  src="http://www.codefans.net/jscss/demoimg/201008/magglass.gif" runat="server" />
+            	
         </td>
 	</tr>
 </table>
