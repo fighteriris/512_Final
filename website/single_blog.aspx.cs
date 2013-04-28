@@ -24,10 +24,21 @@ public partial class single_blog : System.Web.UI.Page
 		myConn.Close();
 
 		int blogCount = 0;
+		String blogWriter = "";
 		foreach (DataRow testRow in mydata.Tables["result"].Rows)
 		{
 			blogCount = (int)testRow["Blog_clickcount"];
+			blogWriter = testRow["Blog_writer"].ToString();
 			break;
+		}
+		if (blogWriter.Equals(User.Identity.Name))
+		{
+			System.Diagnostics.Debug.WriteLine("is writer");
+		}
+		else
+		{
+			System.Diagnostics.Debug.WriteLine("not writer");
+			deleteButton.Visible = false;
 		}
 		blogCount++;
 		myConn.Open();
