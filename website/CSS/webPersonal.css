@@ -46,7 +46,7 @@
 	padding-top: 60px;
 	padding-left: 10%;
 	padding-bottom: 10px;
-	height: 60px;
+	height: auto;
 	width: 100%;
 	display: none;
 }
@@ -129,4 +129,21 @@
 	background-color: white;
 	width: 100%;
 	height: 100px;
+}
+.delete_pic
+{
+
+    width:80%;
+    height:auto;
+    border-style:solid;
+}
+.delete_pic_i
+{
+    margin-left:1px;
+    margin-right:1px;
+    margin-top:1px;
+    margin-bottom:1px;
+    float:left;
+    width:10%;
+    height:auto;
 }

@@ -41,8 +41,14 @@
 			<a onclick="popfldiv();" href="#" class="popback">Back</a>
 			<asp:Label ID="Upload_re" runat="server" />
 			<asp:Label ID="uploadLabel" runat="server" Text=""></asp:Label>
+
+            <div  id="delete_pic" class="delete_pic" runat="server">
+                <img src="homeback2.jpg" class="delete_pic_i" runat="server"/>
+          
+                </div>
 		</div>
 		<div id="pic" runat="server">
+
 		</div>
 
 		<div id="personal_image" class="personal_image" runat="server">

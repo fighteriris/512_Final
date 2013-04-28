@@ -12,7 +12,7 @@
 		<div id="Top_blog_photo" style="width: 100%; height: 300px;">
 			<img id="imgback" src="background_image/1.jpg" style="width: 100%; height: 300px; margin: 0 auto;" />
 		</div>
-        <div id="Top_blog_row"  style="height:auto;" runat="server"/>
+        <div id="Top_blog_row"  class="Top_blog_l"   style ="height:auto;width:50%;float:left;" runat="server">
         <script>
             var _blogs = "<%=getBlogTitle()%>";
             var blogs = new Array();
@@ -35,14 +35,16 @@
                 document.write("</div>");
             }
 			</script>
-            </div>
+        </div>
+    <div id="Top_blog_like" class="Top_blog_r" runat="server">
+        dddd
+        </div>
 
-	</div>
 
 	<br />
 	<br />
 	<br />
 	<br />
 	<hr />
-
+</div>
 </asp:Content>

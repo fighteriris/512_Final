@@ -2,23 +2,43 @@
 }
 .Top_blog_row
 {
-     margin-left:10%;
-     margin-right:10%;
+     
      height:auto;
 	padding-bottom: 10px;
 	padding-top: 10px;
 	padding-left: 15px;
 	padding-right: 15px;
 	margin-top: 5px;
-	width: 65%;
-	height: auto;
-	
+	width:80%;
+	height: auto;	
 	background-color:rgba(206, 205, 205, 0.69);
     box-shadow: 10px 10px 25px rgba(0,0,0,.8);
     border-radius: .5em;
 
 }
+    .Top_blog_row a
+    {
+ font-family:Segoe Script;
+ font-size:20px;
+    }
 
 	.Top_blog_row span {
 		word-break: break-all;
+        font-family:'Meiryo UI';
 	}
+
+.Top_blog_l
+{
+    width:50%;
+    float:left;
+    height:auto;
+    padding-bottom:10%;
+}
+.Top_blog_r
+{
+    width:50%;
+    float:right;
+    height:auto;
+    padding-bottom:10%;
+}
+
