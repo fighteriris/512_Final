@@ -1,0 +1,24 @@
+﻿body {
+}
+.Top_blog_row
+{
+     margin-left:10%;
+     margin-right:10%;
+     height:auto;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-top: 5px;
+	width: 65%;
+	height: auto;
+	
+	background-color:rgba(206, 205, 205, 0.69);
+    box-shadow: 10px 10px 25px rgba(0,0,0,.8);
+    border-radius: .5em;
+
+}
+
+	.Top_blog_row span {
+		word-break: break-all;
+	}
