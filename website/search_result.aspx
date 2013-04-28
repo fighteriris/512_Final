@@ -16,7 +16,7 @@
                <table border="0" cellpadding="0" cellspacing="0" class="tab_search">
 	<tr>
 		<td>
-			<input type="text" name="q" title="Search" class="searchinput_n" id="searchinput" onkeydown="if (event.keyCode==13) {}" onblur="if(this.value=='')value='- Search Products -';" onfocus="if(this.value=='- Search Products -')value='';" value="- Search Products -" size="10"/>
+			<asp:Textbox CssClass="searchinput_n"  id="searchinput" runat="server"/>
 		</td>
 		<td style="width: 61px">
             <asp:ImageButton  src="http://www.codefans.net/jscss/demoimg/201008/magglass.gif" runat="server" />
