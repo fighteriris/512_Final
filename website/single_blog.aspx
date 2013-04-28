@@ -14,8 +14,10 @@
 			document.getElementById('single_blog').appendChild(thenew);
 
 		</script>
-		<asp:Button ID="likeButton" runat="server" float="right" Text="Like it" />
+		<asp:Button ID="likeButton" runat="server" float="right" Text="Like it" onclick="likeButton_Click"/>
 		<asp:Button ID="deleteButton" runat="server" float="right" Text="Delete" OnClick="deleteButton_Click" OnClientClick="return confirm('Are you sure to delete this blog? This operation cannot be undoed!');" />
 		<asp:Label ID="clickCountLabel" runat="server" Text="Label"></asp:Label>
+	&nbsp;&nbsp;&nbsp;
+		<asp:Label ID="likeLabel" runat="server" Text="Label"></asp:Label>
 	</div>
 </asp:Content>

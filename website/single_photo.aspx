@@ -14,6 +14,8 @@
 		<asp:ImageButton CssClass="singe_img_like" ID="likeButton" runat="server" float="right" Text="Like it" OnClick="likeButton_Click" />
 		<asp:Button ID="deleteButton" runat="server" float="right" Text="Delete" OnClick="deleteButton_Click" OnClientClick="return confirm('Are you sure to delete this image? This operation cannot be undoed!');"  />
 		<asp:Label ID="clickCountLabel" CssClass="Clickcount" runat="server" Text="Label"></asp:Label>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+		<asp:Label ID="likeLabel" CssClass="Clickcount" runat="server" Text="Like:"></asp:Label>
             </div>
 	</div>
 </asp:Content>

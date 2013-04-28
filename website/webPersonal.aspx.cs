@@ -37,7 +37,7 @@ public partial class webPersonal : System.Web.UI.Page
 	}
 	public void create()
 	{
-		System.Diagnostics.Debug.WriteLine("dddd");
+		
 	}
 	public string getnum()
 	{
@@ -138,21 +138,23 @@ public partial class webPersonal : System.Web.UI.Page
 			System.IO.Directory.CreateDirectory(directoryPath);
 		}
 
-		FileUpload1.SaveAs(imagePath);
 		uploadLabel.Text = fileName + " upload complete.";
 		string ConStr = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
 		SqlConnection myConn = new SqlConnection(ConStr);
 		myConn.Open();
-		string sqlstr = "INSERT INTO Images values('" + relativePath + "','" + fileName + "','" + img_tags.Text + "','" + User.Identity.Name + "')";
+		string sqlstr = "INSERT INTO Images values('" + relativePath + "','" + fileName + "','" + img_tags.Text + "','" + User.Identity.Name + "','" + "0" + "','" + "0" + "','" + "')";
 		SqlCommand testCommand = myConn.CreateCommand();
 		testCommand.CommandText = sqlstr;
 		try
 		{
+			System.Diagnostics.Debug.WriteLine(sqlstr);
 			testCommand.ExecuteNonQuery();
 			uploadLabel.Text = fileName + " upload complete.";
+			FileUpload1.SaveAs(imagePath);
 		}
 		catch (Exception es)
 		{
+			System.Diagnostics.Debug.WriteLine(sqlstr);
 			uploadLabel.Text = fileName + " already exists.";
 		}
 	}

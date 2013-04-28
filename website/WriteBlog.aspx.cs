@@ -58,9 +58,10 @@ public partial class WriteBlog : System.Web.UI.Page
 				Response.Write("<script>alert(\"You need to login first\");</script>");
 				return;
 			}
-			string sqlstr = "INSERT INTO Blog values('" + Id + "','" + Blog_writer + "','" + Blog_date + "','" + Blog_title + "','" + Blog_content + "','" + Blog_tags + "','" + Blog_acc + "')";
+			string sqlstr = "INSERT INTO Blog values('" + Id + "','" + Blog_writer + "','" + Blog_date + "','" + Blog_title + "','" + Blog_content + "','" + Blog_tags + "','" + Blog_acc + "','" + "0" + "','" + "','" + "0" + "')";
 			SqlCommand testCommand = myConn.CreateCommand();
 			testCommand.CommandText = sqlstr;
+			System.Diagnostics.Debug.WriteLine(sqlstr);
 			try
 			{
 				testCommand.ExecuteNonQuery();
