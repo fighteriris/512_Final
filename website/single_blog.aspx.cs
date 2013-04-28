@@ -164,5 +164,9 @@ public partial class single_blog : System.Web.UI.Page
 			myConn.Close();
 			System.Diagnostics.Debug.WriteLine("sql finished");
 		}
+		else
+		{
+			Response.Write("<script>alert(\"You have 'like' this blog!\");</script>");
+		}
 	}
 }

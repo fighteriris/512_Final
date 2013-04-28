@@ -165,6 +165,10 @@ public partial class single_photo : System.Web.UI.Page
 			myConn.Close();
 			System.Diagnostics.Debug.WriteLine("sql finished");
 		}
+		else
+		{
+			Response.Write("<script>alert(\"You have 'like' this image!\");</script>");
+		}
 	}
 
 }

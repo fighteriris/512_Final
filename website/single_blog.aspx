@@ -2,7 +2,7 @@
 
 <asp:Content ContentPlaceHolderID="MainContent" runat="server">
 	<link href="CSS/single_blog.css" rel="stylesheet" />
-	<div id="single_blog" class="content">
+	<div id="single_blog" class="content" style="margin-bottom:200px">
 		<script>
 			var _blogs = "<%=getContent()%>";
 			var blogs = new Array();
