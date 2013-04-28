@@ -132,10 +132,9 @@
 }
 .delete_pic
 {
-
     width:80%;
     height:auto;
-    border-style:solid;
+    border-style:groove;
 }
 .delete_pic_i
 {
@@ -144,6 +143,6 @@
     margin-top:1px;
     margin-bottom:1px;
     float:left;
-    width:10%;
+    width:12%;
     height:auto;
 }

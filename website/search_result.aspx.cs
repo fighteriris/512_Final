@@ -10,12 +10,19 @@ using System.Data;
 
 public partial class search_blog : System.Web.UI.Page
 {
-    protected void Page_Load(object sender, EventArgs e)
-    {
-		
-    }
+	protected void Page_Init(object sender, EventArgs e)
+	{
+		String searchString = Request.QueryString["search"];
+		searchinput.Text = searchString;
+	}
 
-	protected String getBlogInfo() {
+	protected void Page_Load(object sender, EventArgs e)
+	{
+
+	}
+
+	protected String getBlogInfo()
+	{
 		String res = "";
 		String textToSearch = searchinput.Text;
 		if (textToSearch.Length == 0)
@@ -53,5 +60,9 @@ public partial class search_blog : System.Web.UI.Page
 		}
 
 		return res;
+	}
+	protected void imageButton_Click(object sender, ImageClickEventArgs e)
+	{
+		Response.Redirect("search_result.aspx", false);
 	}
 }

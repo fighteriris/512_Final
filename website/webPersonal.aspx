@@ -42,13 +42,19 @@
 			<asp:Label ID="Upload_re" runat="server" />
 			<asp:Label ID="uploadLabel" runat="server" Text=""></asp:Label>
 
-            <div  id="delete_pic" class="delete_pic" runat="server">
-                <img src="homeback2.jpg" class="delete_pic_i" runat="server"/>
-          
-                </div>
+			<div id="delete_pic" class="delete_pic" runat="server">
+				<script type="text/javascript">
+					var _imgs = "<%=getPath()%>";
+					var imgs = new Array();
+					imgs = _imgs.split(",");
+					for (j = 0; j < imgs.length - 1; j++) {
+						document.writeln("<a href=\"single_photo.aspx?path=" + imgs[j] + "\"><img src=\"" + imgs[j] + "\" class=\"delete_pic_i\"/></a>");
+					}
+				</script>
+			</div>
+
 		</div>
 		<div id="pic" runat="server">
-
 		</div>
 
 		<div id="personal_image" class="personal_image" runat="server">
@@ -56,7 +62,7 @@
 			<script type="text/javascript" src=" https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 			<script type="text/javascript" src="lib/jquery.jcarousel.min.js"></script>
 			<script type="text/javascript" src="lib/jquery.pikachoose.min.js"></script>
-			<script language="javascript">
+			<script>
 				$(document).ready(function () {
 					$("#pikame").PikaChoose({ carousel: true, carouselVertical: true });
 				});

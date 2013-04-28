@@ -23,18 +23,18 @@
 			<div class="Home_status" runat="server">
 				<%-- Content --%>
 				<ul>
-					<li style="margin-right: 100px">
+					<li style="padding-right: 200px">
 						<div class="float-right">
 							<section id="login">
 								<asp:LoginView ID="LoginView1" runat="server" ViewStateMode="Disabled">
 									<AnonymousTemplate>
-										<ul style="font-size: 16px">
+										<ul style="font-size: 16px; margin-right:-100px">
 											<li><a id="registerLink" runat="server" href="~/Regist.aspx" style="color: white">Register</a></li>
 											<li><a id="loginLink" runat="server" href="~/Login.aspx" style="color: white">Log in</a></li>
 										</ul>
 									</AnonymousTemplate>
 									<LoggedInTemplate>
-										<p style="width: 200px; margin: 0; font-size: medium">
+										<p style="width: 200px; margin: 0; font-size: medium; padding-top:13px">
 											Hello, <a id="A1" runat="server" class="username" href="~/webPersonal.aspx" title="Manage your account">
 												<asp:LoginName ID="LoginName1" runat="server" />
 											</a>!

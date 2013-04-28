@@ -19,7 +19,7 @@
 							<asp:TextBox CssClass="searchinput_n" ID="searchinput" runat="server" />
 						</td>
 						<td style="width: 61px">
-							<asp:ImageButton ID="imageButton" src="http://www.codefans.net/jscss/demoimg/201008/magglass.gif" runat="server" />
+							<asp:ImageButton ID="imageButton" src="http://www.codefans.net/jscss/demoimg/201008/magglass.gif" runat="server" OnClick="imageButton_Click" />
 
 						</td>
 					</tr>

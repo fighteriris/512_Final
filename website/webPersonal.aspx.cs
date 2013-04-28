@@ -26,13 +26,11 @@ public partial class webPersonal : System.Web.UI.Page
 		DataSet mydata = new DataSet();
 		adapter.Fill(mydata, "result");
 		myConn.Close();
-		int tmp = 0;
 
 		foreach (DataRow testRow in mydata.Tables["result"].Rows)
 		{
 			String pathStr = testRow["image_path"].ToString();
 			res += pathStr + ",";
-			tmp++;
 		}
 
 		return res;
@@ -100,10 +98,7 @@ public partial class webPersonal : System.Web.UI.Page
 		}
 		 */
 	}
-	protected void submit_blog_Click(object sender, EventArgs e)
-	{
 
-	}
 	protected void img_upload_Click(object sender, EventArgs e)
 	{
 		uploadLabel.Text = "";
