@@ -61,7 +61,7 @@ public partial class topBlog : System.Web.UI.Page
         String _num = topnum.ToString();
         myConn.Open();
         // String user = User.Identity.Name;
-        string sqlstr = "select  top " + _num + " * from [Blog] order by [Blog_clickcount] DESC";
+        string sqlstr = "select  top " + _num + " * from [Blog] order by [Blog_like] DESC";
         SqlDataAdapter adapter = new SqlDataAdapter(sqlstr, myConn);
         DataSet mydata = new DataSet();
         adapter.Fill(mydata, "result_data");

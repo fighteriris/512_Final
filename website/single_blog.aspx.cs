@@ -104,4 +104,8 @@ public partial class single_blog : System.Web.UI.Page
 		myConn.Close();
 		Response.Redirect("webPersonal.aspx", true);
 	}
+    protected void likeButton_Click(object sender, EventArgs e)
+    {
+
+    }
 }
