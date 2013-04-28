@@ -22,7 +22,7 @@
 			</div>
 			<div class="personal_info_col">
 				<span>
-					<a onclick="popfldiv();" href="#" class="clickthis" style="color: #808080">Upload Image</a>
+					<a onclick="popfldiv();" href="#" class="clickthis" style="color: #808080">Images Management</a>
 					<script type="text/javascript">
 						function popfldiv() {
 							document.getElementById('MainContent_personal_upload').style.display = (document.getElementById('MainContent_personal_upload').style.display == 'none') ? 'block' : 'none';// feilong.org/onclick-a-link-popout-div

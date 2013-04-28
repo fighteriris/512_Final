@@ -38,7 +38,6 @@ public partial class search_blog : System.Web.UI.Page
 		adapter.Fill(mydata, "result");
 		myConn.Close();
 
-		System.Diagnostics.Debug.WriteLine("test here: ");
 		foreach (DataRow testRow in mydata.Tables["result"].Rows)
 		{
 			String blogID = testRow["Id"].ToString();
@@ -61,8 +60,38 @@ public partial class search_blog : System.Web.UI.Page
 
 		return res;
 	}
-	protected void imageButton_Click(object sender, ImageClickEventArgs e)
+
+	protected String getImageInfo()
 	{
-		Response.Redirect("search_result.aspx", false);
+		String res = "";
+		String textToSearch = searchinput.Text;
+		if (textToSearch.Length == 0)
+		{
+			return null;
+		}
+		string ConStr = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+		SqlConnection myConn = new SqlConnection(ConStr);
+		myConn.Open();
+		string sqlstr = "SELECT * FROM Images where image_tag like '%" + textToSearch + "%' order by image_clickcount DESC";
+		SqlDataAdapter adapter = new SqlDataAdapter(sqlstr, myConn);
+		DataSet mydata = new DataSet();
+		adapter.Fill(mydata, "result");
+		myConn.Close();
+
+		foreach (DataRow testRow in mydata.Tables["result"].Rows)
+		{
+			String imagePath = testRow["image_path"].ToString();
+			imagePath = imagePath.Replace("&", " ");
+			imagePath = imagePath.Replace("#", " ");
+			String imageTag = testRow["image_tag"].ToString();
+			imageTag = imageTag.Replace("&", " ");
+			imageTag = imageTag.Replace("#", " ");
+			String imageUser = testRow["image_user"].ToString();
+			imageUser = imageUser.Replace("&", " ");
+			imageUser = imageUser.Replace("#", " ");
+			res += imagePath + "&" + imageTag + "&" + imageUser + "#";
+		}
+
+		return res;
 	}
 }

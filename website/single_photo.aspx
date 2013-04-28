@@ -12,6 +12,7 @@
 		</script>
 
 		<asp:Button ID="likeButton" runat="server" float="right" Text="Like it" />
-		<asp:Button ID="deleteButton" runat="server" float="right" Text="Delete" />
+		<asp:Button ID="deleteButton" runat="server" float="right" Text="Delete" OnClick="deleteButton_Click" OnClientClick="return confirm('Are you sure to delete this image? This operation cannot be undoed!');"  />
+		<asp:Label ID="clickCountLabel" runat="server" Text="Label"></asp:Label>
 	</div>
 </asp:Content>

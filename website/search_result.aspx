@@ -19,7 +19,7 @@
 							<asp:TextBox CssClass="searchinput_n" ID="searchinput" runat="server" />
 						</td>
 						<td style="width: 61px">
-							<asp:ImageButton ID="imageButton" src="http://www.codefans.net/jscss/demoimg/201008/magglass.gif" runat="server" OnClick="imageButton_Click" />
+							<asp:ImageButton ID="imageButton" src="http://www.codefans.net/jscss/demoimg/201008/magglass.gif" runat="server"/>
 
 						</td>
 					</tr>
@@ -58,7 +58,23 @@
 
 		<div id="search_photo_result" style="height: 590px; width: 49%; float: right; border: dotted">
 			<h3 style="text-align: center">Here is the relevant photos</h3>
+			<script>
+				var _images = "<%=getImageInfo()%>";
+				var images = new Array();
+				images = _images.split("#");
 
+				for (j = 0; j < images.length - 1; j++) {
+					var contents = new Array();
+					contents = images[j].split("&");
+					document.write("<div>");
+					document.writeln("<a href=\"single_photo.aspx?path=" + contents[0] + "\"><img src=\"" + contents[0] + "\" class=\"delete_pic_i\"/></a>");
+					document.write("<span style=\"font-size: 10px;\">" + contents[1] + "</span>");
+					document.write("<br/>");
+					document.write("<span style=\"font-size: 10px;\">" + contents[2] + "</span>");
+					document.write("<br/>");
+					document.write("</div>");
+				}
+			</script>
 
 		</div>
 	</div>
