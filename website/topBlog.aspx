@@ -37,7 +37,28 @@
 			</script>
         </div>
     <div id="Top_blog_like" class="Top_blog_r" runat="server">
-        dddd
+            <script>
+                var _blogs = "<%=getBlogTitle_aslike()%>";
+                var blogs = new Array();
+                blogs = _blogs.split("#");
+
+                for (j = 0; j < blogs.length - 1; j++) {
+                    var contents = new Array();
+                    contents = blogs[j].split("&");
+                    document.write("<div class=\"Top_blog_row\">");
+                    document.write("<a href='single_blog.aspx?id=" + contents[0] + "');\">" + contents[1] + "</a>");
+                    document.write("<br/>");
+                    if (contents[2].lastIndexOf("<img") > 0) {
+                        contents[2] = contents[2].substr(0, contents[2].lastIndexOf("<img"));
+                    }
+                    contents[2] = contents[2].replace(/<[^>]+>/g, "");
+                    document.write("<span style=\"font-size: 10px;\">" + contents[3] + "</span>");
+                    document.write("<br/>");
+                    document.write("<span>&nbsp&nbsp&nbsp&nbsp" + contents[2].substr(0, 200) + "&nbsp ... ...");
+                    document.write("</span>");
+                    document.write("</div>");
+                }
+			</script>
         </div>
 
 
