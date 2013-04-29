@@ -99,3 +99,33 @@
     {
         background-image:url(more1.png);
     }
+
+    .singe_img_like
+{
+-webkit-background-clip: border-box;
+-webkit-background-origin: padding-box;
+-webkit-background-size: auto;
+background-attachment: scroll;
+background-clip: border-box;
+background-origin: padding-box;
+background-position: 2px 0px;
+   background-image:url(heart_1.png);
+background-size: auto;
+color: rgb(104, 104, 104);
+cursor: pointer;
+direction: ltr;
+
+bottom:0px;
+font-family: Tahoma, Verdana, STHeiTi, simsun, sans-serif;
+font-size: 12px;
+height: 30px;
+line-height: 40px;
+text-align: center;
+text-decoration: none;
+width: 30px;
+float:left;
+}
+    .singe_img_like:hover
+    {
+        background-image:url(heart_2.png);
+    }
