@@ -28,7 +28,7 @@
                     contents[2] = contents[2].substr(0, contents[2].lastIndexOf("<img"));
                 }
                 contents[2] = contents[2].replace(/<[^>]+>/g, "");
-                document.write("<span style=\"font-size: 10px;\">" + contents[3] + "</span>");
+                document.write("<span style=\"font-size: 10px;\">" + contents[4]+"&nbsp&nbsp&nbsp&nbsp"+contents[3] + "&nbsp&nbsp&nbsp&nbsp"+contents[4]+"&nbsp&nbsp&nbsp&nbspClicked:&nbsp"+contents[5]+"</span>");
                 document.write("<br/>");
                 document.write("<span>&nbsp&nbsp&nbsp&nbsp" + contents[2].substr(0, 200) + "&nbsp ... ...");
                 document.write("</span>");
@@ -52,7 +52,7 @@
                         contents[2] = contents[2].substr(0, contents[2].lastIndexOf("<img"));
                     }
                     contents[2] = contents[2].replace(/<[^>]+>/g, "");
-                    document.write("<span style=\"font-size: 10px;\">" + contents[3] + "</span>");
+                    document.write("<span style=\"font-size: 10px;\">" + contents[4] + "&nbsp&nbsp&nbsp&nbsp" + contents[3] + "&nbsp&nbsp&nbsp&nbsp Liked:&nbsp" + contents[5] + "</span>");
                     document.write("<br/>");
                     document.write("<span>&nbsp&nbsp&nbsp&nbsp" + contents[2].substr(0, 200) + "&nbsp ... ...");
                     document.write("</span>");

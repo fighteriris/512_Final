@@ -127,15 +127,12 @@
 
 		<div id="Home_content" runat="Server">
 			<div id="Home_bar" class="Home_search_bar" runat="Server">
-				<a class="button" href="#" onclick="window.open('topPhoto.aspx')">
+				<a class="button" href="#" onclick="window.open('topPhoto.aspx?num=2')">
 					<br />
 					Top Photos </a>
 				<a class="button_mid" href="#" onclick="window.open('topBlog.aspx')">
 					<br />
 					Top Blogs </a>
-				<a class="button_l" href="#" onclick="window.open">
-					<br />
-					click me </a>
 				
                <table border="0" cellpadding="0" cellspacing="0" class="tab_search">
 	<tr>

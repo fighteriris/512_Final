@@ -3,7 +3,7 @@
     background-color:white;
     width:45%;
     margin-left:10px;
-    height:auto;
+    height:300px;
     float:left;
     padding-bottom:30px;
  -webkit-border-radius: .5em;
@@ -35,5 +35,5 @@
     border-bottom-style:groove;
     border-radius: .5em .5em 0 0;
     width:100%;
-    height:auto;
+    height:80%;
 }

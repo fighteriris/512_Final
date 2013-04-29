@@ -7,7 +7,6 @@
     <div class="content" style="padding-top: 20px; height: 100%; padding-bottom: 30px;">
         <script>
             a();
-            a();
             function a() {
                 var _images = "<%=getImageInfo()%>";
                 var images = new Array();
@@ -21,23 +20,22 @@
                     document.write("<br/>");
                     document.write("<span style=\"font-size: 10px;\">" + contents[1] + "</span>");
                     document.write("<br/>");
-                    document.write("<span style=\"font-size: 10px;\">" + contents[2] + "</span>");
+                    
+                    document.write("<span style=\"font-size: 10px;\">" + contents[2] + "&nbsp&nbsp&nbsp&nbsp Click-through rate:&nbsp"+contents[3]+"</span>");
                     document.write("<br/>");
-                    document.write("</div>");
+                    document.write("</div> ");
                 }
 
 
             }
-
-            document.write("<div class=\"topPhoto_row_l\">");
-            document.write(" <a href=\"\" CssClass=\"Searchmore_more\" onclick=\"search_more()\" />dfdfdfddf</a>");
-            document.write("</div>");
-
-            function search_more() {
-                var ddd = "<%=num()%>";
+            b();
+            function b() {
+                var b = "<%=getNum()%>";
+                document.write("<div class=\"topPhoto_row_l\">");
+                var num = eval(b) + eval(2);
+                document.write(" <a href=\"topPhoto.aspx?num="+num+"\" CssClass=\"Searchmore_more\" onclick=\"search_more()\" />Look More</a>");
+                document.write("</div>");
             }
-         
-
         </script>
 
     </div>

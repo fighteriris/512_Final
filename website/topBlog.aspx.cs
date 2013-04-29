@@ -10,7 +10,7 @@ using System.Web.UI.WebControls;
 
 public partial class topBlog : System.Web.UI.Page
 {
-    public int topnum = 3;
+    public int topnum = 10;
     protected void Page_Load(object sender, EventArgs e)
     {
 
@@ -46,7 +46,13 @@ public partial class topBlog : System.Web.UI.Page
             String blogDate = testRow["Blog_date"].ToString();
             blogDate = blogDate.Replace("&", " ");
             blogDate = blogDate.Replace("#", " ");
-            res += blogID + "&" + blogTitle + "&" + blogContent + "&" + blogDate + "#";
+            String blogwriter = testRow["Blog_writer"].ToString();
+            blogwriter = blogwriter.Replace("&", " ");
+            blogwriter = blogwriter.Replace("#", " ");
+            String blogck = testRow["Blog_clickcount"].ToString();
+            blogck = blogck.Replace("&", " ");
+            blogck = blogck.Replace("#", " ");
+            res += blogID + "&" + blogTitle + "&" + blogContent + "&" + blogDate + "&" + blogwriter +"&"+ blogck+"#";
             tmp++;
         }
 
@@ -82,7 +88,13 @@ public partial class topBlog : System.Web.UI.Page
             String blogDate = testRow["Blog_date"].ToString();
             blogDate = blogDate.Replace("&", " ");
             blogDate = blogDate.Replace("#", " ");
-            res += blogID + "&" + blogTitle + "&" + blogContent + "&" + blogDate + "#";
+            String blogwriter = testRow["Blog_writer"].ToString();
+            blogwriter = blogwriter.Replace("&", " ");
+            blogwriter = blogwriter.Replace("#", " ");
+            String blogLike = testRow["Blog_like"].ToString();
+            blogLike = blogLike.Replace("&", " ");
+            blogLike = blogLike.Replace("#", " ");
+            res += blogID + "&" + blogTitle + "&" + blogContent + "&" + blogDate +"&"+blogwriter+"&"+blogLike+ "#";
             tmp++;
         }
 
