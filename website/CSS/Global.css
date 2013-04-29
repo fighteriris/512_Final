@@ -91,9 +91,11 @@
 	}
 .Searchmore_more
 {
-    background-image:url();
-    width:70px;
-    height:20px;
-    background-color:black;
-    
+    background-image:url(more2.png);
+    width:100px;
+    height:30px;   
 }
+    .Searchmore_more:hover
+    {
+        background-image:url(more1.png);
+    }

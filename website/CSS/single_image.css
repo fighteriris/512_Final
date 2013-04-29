@@ -7,9 +7,9 @@
 -webkit-background-size: auto;
 background-attachment: scroll;
 background-clip: border-box;
-background-color: black;
 background-origin: padding-box;
 background-position: 2px 0px;
+   background-image:url(heart_1.png);
 background-size: auto;
 color: rgb(104, 104, 104);
 cursor: pointer;
@@ -25,6 +25,10 @@ text-decoration: none;
 width: 30px;
 float:left;
 }
+    .singe_img_like:hover
+    {
+        background-image:url(heart_2.png);
+    }
 .Clickcount
 {
     font-family:'Meiryo UI';

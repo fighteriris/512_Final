@@ -19,7 +19,7 @@ public partial class topPhoto : System.Web.UI.Page
     protected int getNum() {
         String numStr = Request.QueryString["num"];
         int _num = 0;
-        if (numStr.Equals(null))
+        if (numStr==null)
         {
             _num = 2;
         }

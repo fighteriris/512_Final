@@ -33,7 +33,7 @@
                 var b = "<%=getNum()%>";
                 document.write("<div class=\"topPhoto_row_l\">");
                 var num = eval(b) + eval(2);
-                document.write(" <a href=\"topPhoto.aspx?num="+num+"\" CssClass=\"Searchmore_more\" onclick=\"search_more()\" />Look More</a>");
+                document.write(" <a href=\"topPhoto.aspx?num="+num+"\" Class=\"Searchmore_more\" onclick=\"search_more()\" />_________</a>");
                 document.write("</div>");
             }
         </script>

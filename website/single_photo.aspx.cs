@@ -127,6 +127,9 @@ public partial class single_photo : System.Web.UI.Page
 			imageLike = (int)testRow["image_like"];
 			break;
 		}
+        if(User.Identity.Name.Equals(null)){
+            return;
+        }
 		String[] userlike = imageLikeUser.Split(';');
 		bool exist = false;
 			

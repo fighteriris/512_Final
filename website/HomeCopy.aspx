@@ -4,7 +4,7 @@
     
 	<link href="CSS/Home_page.css" rel="stylesheet" />
 	<script>
-		window.onload = setInterval("sitebg()", 10000);
+		window.onload = setInterval("sitebg()", 5000);
 		var iBase = {
 			Id: function (name) {
 				return document.getElementById(name);
@@ -70,41 +70,77 @@
 
 			var d = new Date();
 			var sed = d.getSeconds();
-			if (sed > 0 && sed <= 10) {
+			if (sed > 0 && sed <= 5) {
 				fadeIn(iBase.Id('MainContent_Div1'));
 				document.getElementById('MainContent_Div1').style.background = "url('background_image/1.jpg') no-repeat";
 				//"url('Home_BG/BG1.png') no-repeat";
 				//document.body.style.background = "url('1.jpg') repeat-x scroll 0 10px #EFEFEF"
 			}
-			else if (sed > 10 && sed <= 20) {
+			else if (sed > 5 && sed <= 10) {
 				fadeIn(iBase.Id('MainContent_Div1'));
 				document.getElementById('MainContent_Div1').style.background = "url('background_image/2.jpg') no-repeat";
 				//"url('Home_BG/BG2.png')";
 				//document.body.style.background = "url('images/headerbg_2.png') repeat-x scroll 0 10px #EFEFEF"
 			}
-			else if (sed > 20 && sed <= 30) {
+			else if (sed > 10 && sed <= 15) {
 				fadeIn(iBase.Id('MainContent_Div1'));
 				document.getElementById('MainContent_Div1').style.background = "url('background_image/3.jpg')no-repeat";
 				//"url('Home_BG/BG3.png')";
 				//document.body.style.background = "url('images/headerbg_3.png') repeat-x scroll 0 10px #EFEFEF"
 			}
-			else if (sed > 30 && sed <= 40) {
+			else if (sed > 15 && sed <= 20) {
 				fadeIn(iBase.Id('MainContent_Div1'));
 				document.getElementById('MainContent_Div1').style.background = "url('background_image/4.jpg')no-repeat ";
 				//"url('Home_BG/BG2.png')";
 				//document.body.style.background = "url('images/headerbg_2.png') repeat-x scroll 0 10px #EFEFEF"
 			}
-			else if (sed > 40 && sed <= 50) {
+			else if (sed > 20 && sed <= 25) {
 				fadeIn(iBase.Id('MainContent_Div1'));
 				document.getElementById('MainContent_Div1').style.background = "url('background_image/5.jpg')no-repeat";
 				//"url('Home_BG/BG2.png')";
 				//document.body.style.background = "url('images/headerbg_2.png') repeat-x scroll 0 10px #EFEFEF"
 			}
-			else if (sed > 50 && sed <= 0) {
+			else if (sed > 25 && sed <= 30) {
 				fadeIn(iBase.Id('MainContent_Div1'));
 				document.getElementById('MainContent_Div1').style.background = "url('background_image/6.jpg')no-repeat";
 				//"url('Home_BG/BG2.png')";
 				//document.body.style.background = "url('images/headerbg_2.png') repeat-x scroll 0 10px #EFEFEF"
+			}
+			if (sed > 30 && sed <= 35) {
+			    fadeIn(iBase.Id('MainContent_Div1'));
+			    document.getElementById('MainContent_Div1').style.background = "url('background_image/1.jpg') no-repeat";
+			    //"url('Home_BG/BG1.png') no-repeat";
+			    //document.body.style.background = "url('1.jpg') repeat-x scroll 0 10px #EFEFEF"
+			}
+			else if (sed > 35 && sed <=40) {
+			    fadeIn(iBase.Id('MainContent_Div1'));
+			    document.getElementById('MainContent_Div1').style.background = "url('background_image/2.jpg') no-repeat";
+			    //"url('Home_BG/BG2.png')";
+			    //document.body.style.background = "url('images/headerbg_2.png') repeat-x scroll 0 10px #EFEFEF"
+			}
+			else if (sed > 40 && sed <= 45) {
+			    fadeIn(iBase.Id('MainContent_Div1'));
+			    document.getElementById('MainContent_Div1').style.background = "url('background_image/3.jpg')no-repeat";
+			    //"url('Home_BG/BG3.png')";
+			    //document.body.style.background = "url('images/headerbg_3.png') repeat-x scroll 0 10px #EFEFEF"
+			}
+			else if (sed > 45 && sed <= 50) {
+			    fadeIn(iBase.Id('MainContent_Div1'));
+			    document.getElementById('MainContent_Div1').style.background = "url('background_image/4.jpg')no-repeat ";
+			    //"url('Home_BG/BG2.png')";
+			    //document.body.style.background = "url('images/headerbg_2.png') repeat-x scroll 0 10px #EFEFEF"
+			}
+			else if (sed > 50 && sed <= 55) {
+			    fadeIn(iBase.Id('MainContent_Div1'));
+			    document.getElementById('MainContent_Div1').style.background = "url('background_image/5.jpg')no-repeat";
+			    //"url('Home_BG/BG2.png')";
+			    //document.body.style.background = "url('images/headerbg_2.png') repeat-x scroll 0 10px #EFEFEF"
+			}
+			else if (sed > 55 && sed <= 60) {
+			    fadeIn(iBase.Id('MainContent_Div1'));
+			    document.getElementById('MainContent_Div1').style.background = "url('background_image/6.jpg')no-repeat";
+			    //"url('Home_BG/BG2.png')";
+			    //document.body.style.background = "url('images/headerbg_2.png') repeat-x scroll 0 10px #EFEFEF"
 			}
 		}
 
