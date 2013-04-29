@@ -21,8 +21,8 @@ public partial class WriteBlog : System.Web.UI.Page
 		{
 			String Blog_content = myInstance1.InnerText;
 			System.Diagnostics.Debug.WriteLine("here " + Blog_content);
+			Blog_content = Blog_content.Replace("\'", " ");
 			Blog_content = Blog_content.Replace("\"", "\\\"");
-			Blog_content = Blog_content.Replace("'", "\'");
 			System.Diagnostics.Debug.WriteLine("there " + Blog_content);
 			String Blog_title = title_textbox.Text;
 			Blog_title = Blog_title.Replace("\"", "\\\"");
